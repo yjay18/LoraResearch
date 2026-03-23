@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Large files - activations, model caches
+*.npy
+*.npz
+*.mmap
+activations/
+
+# HuggingFace cache
+.cache/
+
+# Results (keep structure, ignore large outputs selectively)
+results/*.npy
+results/*.npz
+
+# Secrets
+.env
