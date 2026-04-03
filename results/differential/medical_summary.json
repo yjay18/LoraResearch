@@ -1,0 +1,498 @@
+{
+  "adapter": "medical",
+  "feature_count": 16384,
+  "features_with_domain_switch": 2003,
+  "mean_delta_token_freq": 1.5364175101099351e-06,
+  "mean_abs_delta_token_freq": 0.0008790582277609278,
+  "mean_delta_mean_active": -0.12340361064863782,
+  "mean_context_shift": 0.04972664779097613,
+  "max_context_shift": 1.0,
+  "top_amplified_by_frequency": [
+    {
+      "feature_id": 10967,
+      "delta_token_freq": 0.08287895310796078,
+      "delta_prompt_freq": 0.050000000000000044,
+      "delta_mean_active": 0.607487529845975
+    },
+    {
+      "feature_id": 5650,
+      "delta_token_freq": 0.08178844056706652,
+      "delta_prompt_freq": 0.0,
+      "delta_mean_active": 0.16885646494667395
+    },
+    {
+      "feature_id": 6565,
+      "delta_token_freq": 0.07542711741185024,
+      "delta_prompt_freq": 0.1433333333333333,
+      "delta_mean_active": -0.06404025508679467
+    },
+    {
+      "feature_id": 13431,
+      "delta_token_freq": 0.06761177753544168,
+      "delta_prompt_freq": 0.29999999999999993,
+      "delta_mean_active": -0.21433264686547915
+    },
+    {
+      "feature_id": 15454,
+      "delta_token_freq": 0.06570338058887677,
+      "delta_prompt_freq": 0.0,
+      "delta_mean_active": -5.3652214127797535
+    },
+    {
+      "feature_id": 9195,
+      "delta_token_freq": 0.05870592511813886,
+      "delta_prompt_freq": 0.0,
+      "delta_mean_active": -1.3209997747498274
+    },
+    {
+      "feature_id": 11412,
+      "delta_token_freq": 0.05816066884769172,
+      "delta_prompt_freq": 0.07333333333333325,
+      "delta_mean_active": 0.4152685392970188
+    },
+    {
+      "feature_id": 880,
+      "delta_token_freq": 0.05352599054889131,
+      "delta_prompt_freq": 0.11666666666666667,
+      "delta_mean_active": 0.365211090686274
+    },
+    {
+      "feature_id": 8676,
+      "delta_token_freq": 0.04989094874591058,
+      "delta_prompt_freq": 0.0,
+      "delta_mean_active": -8.714642303173392
+    },
+    {
+      "feature_id": 7493,
+      "delta_token_freq": 0.049254816430388954,
+      "delta_prompt_freq": 0.0,
+      "delta_mean_active": 1.073057968838338
+    },
+    {
+      "feature_id": 6913,
+      "delta_token_freq": 0.03989458378771356,
+      "delta_prompt_freq": 0.75,
+      "delta_mean_active": -0.967567137608853
+    },
+    {
+      "feature_id": 3985,
+      "delta_token_freq": 0.03853144311159579,
+      "delta_prompt_freq": 0.0,
+      "delta_mean_active": -6.686241895428687
+    },
+    {
+      "feature_id": 15848,
+      "delta_token_freq": 0.03816793893129771,
+      "delta_prompt_freq": 0.08999999999999997,
+      "delta_mean_active": 0.09625587223099519
+    },
+    {
+      "feature_id": 2009,
+      "delta_token_freq": 0.03562340966921118,
+      "delta_prompt_freq": 0.13,
+      "delta_mean_active": 0.18561569046963555
+    },
+    {
+      "feature_id": 3548,
+      "delta_token_freq": 0.03380588876772083,
+      "delta_prompt_freq": 0.8766666666666667,
+      "delta_mean_active": -1.7711310832908032
+    },
+    {
+      "feature_id": 12342,
+      "delta_token_freq": 0.03280625227190115,
+      "delta_prompt_freq": 0.030000000000000027,
+      "delta_mean_active": 0.5066528881024315
+    },
+    {
+      "feature_id": 12439,
+      "delta_token_freq": 0.03189749182115594,
+      "delta_prompt_freq": 0.1166666666666667,
+      "delta_mean_active": 0.1473410492121614
+    },
+    {
+      "feature_id": 13860,
+      "delta_token_freq": 0.03171573973100689,
+      "delta_prompt_freq": 0.0,
+      "delta_mean_active": -0.2214363687237757
+    },
+    {
+      "feature_id": 13209,
+      "delta_token_freq": 0.031261359505634315,
+      "delta_prompt_freq": 0.7966666666666666,
+      "delta_mean_active": -0.5023891695329796
+    },
+    {
+      "feature_id": 8159,
+      "delta_token_freq": 0.029989094874591057,
+      "delta_prompt_freq": 0.76,
+      "delta_mean_active": -0.5781258571529331
+    }
+  ],
+  "top_suppressed_by_frequency": [
+    {
+      "feature_id": 11306,
+      "delta_token_freq": -0.0706106870229008,
+      "delta_prompt_freq": -0.0033333333333332993,
+      "delta_mean_active": -0.35682440832338447
+    },
+    {
+      "feature_id": 5472,
+      "delta_token_freq": -0.0663395129043984,
+      "delta_prompt_freq": -0.16666666666666663,
+      "delta_mean_active": -0.3968690267578996
+    },
+    {
+      "feature_id": 8806,
+      "delta_token_freq": -0.047891675754271196,
+      "delta_prompt_freq": 0.0,
+      "delta_mean_active": 0.7087959460147335
+    },
+    {
+      "feature_id": 7541,
+      "delta_token_freq": -0.03735005452562712,
+      "delta_prompt_freq": 0.0,
+      "delta_mean_active": -0.23341875495987807
+    },
+    {
+      "feature_id": 10811,
+      "delta_token_freq": -0.0346237731733915,
+      "delta_prompt_freq": -0.8466666666666667,
+      "delta_mean_active": 0.9899905002565559
+    },
+    {
+      "feature_id": 8375,
+      "delta_token_freq": -0.03362413667757178,
+      "delta_prompt_freq": -0.20000000000000007,
+      "delta_mean_active": 0.021509590021005387
+    },
+    {
+      "feature_id": 4681,
+      "delta_token_freq": -0.033351508542348245,
+      "delta_prompt_freq": -0.21333333333333332,
+      "delta_mean_active": 0.3950405506809247
+    },
+    {
+      "feature_id": 5153,
+      "delta_token_freq": -0.030534351145038167,
+      "delta_prompt_freq": -0.72,
+      "delta_mean_active": 1.5456581779356258
+    },
+    {
+      "feature_id": 15404,
+      "delta_token_freq": -0.02998909487459106,
+      "delta_prompt_freq": 0.0,
+      "delta_mean_active": -0.5057160939882657
+    },
+    {
+      "feature_id": 3479,
+      "delta_token_freq": -0.029080334423845874,
+      "delta_prompt_freq": -0.83,
+      "delta_mean_active": 0.7803441525130408
+    },
+    {
+      "feature_id": 3862,
+      "delta_token_freq": -0.029080334423845874,
+      "delta_prompt_freq": -0.7533333333333333,
+      "delta_mean_active": 0.7075485380569306
+    },
+    {
+      "feature_id": 10325,
+      "delta_token_freq": -0.0287168302435478,
+      "delta_prompt_freq": -0.9633333333333334,
+      "delta_mean_active": 1.891255115327381
+    },
+    {
+      "feature_id": 2723,
+      "delta_token_freq": -0.02862595419847328,
+      "delta_prompt_freq": -0.9533333333333334,
+      "delta_mean_active": 2.990623746389602
+    },
+    {
+      "feature_id": 15945,
+      "delta_token_freq": -0.028444202108324247,
+      "delta_prompt_freq": -0.89,
+      "delta_mean_active": 0.6347695353661744
+    },
+    {
+      "feature_id": 5717,
+      "delta_token_freq": -0.02835332606324973,
+      "delta_prompt_freq": -0.9299999999999999,
+      "delta_mean_active": 1.088197806631455
+    },
+    {
+      "feature_id": 12218,
+      "delta_token_freq": -0.028262450018175206,
+      "delta_prompt_freq": -0.8733333333333333,
+      "delta_mean_active": 1.1459620025610713
+    },
+    {
+      "feature_id": 8686,
+      "delta_token_freq": -0.028080697928026175,
+      "delta_prompt_freq": -0.88,
+      "delta_mean_active": 2.273613049143183
+    },
+    {
+      "feature_id": 1931,
+      "delta_token_freq": -0.027989821882951654,
+      "delta_prompt_freq": -0.9533333333333334,
+      "delta_mean_active": 1.521986302828902
+    },
+    {
+      "feature_id": 10925,
+      "delta_token_freq": -0.02798982188295165,
+      "delta_prompt_freq": -0.87,
+      "delta_mean_active": 1.2204876443266937
+    },
+    {
+      "feature_id": 15996,
+      "delta_token_freq": -0.02798982188295165,
+      "delta_prompt_freq": -0.8766666666666667,
+      "delta_mean_active": 0.8271983753551133
+    }
+  ],
+  "top_amplified_by_magnitude": [
+    {
+      "feature_id": 1846,
+      "delta_mean_active": 25.86951707040398,
+      "delta_token_freq": -0.026899309342057434,
+      "delta_prompt_freq": -0.8466666666666667
+    },
+    {
+      "feature_id": 7465,
+      "delta_mean_active": 15.768229166666666,
+      "delta_token_freq": -0.00018175209014903673,
+      "delta_prompt_freq": -0.006666666666666666
+    },
+    {
+      "feature_id": 9880,
+      "delta_mean_active": 13.823516310307017,
+      "delta_token_freq": -0.027353689567430027,
+      "delta_prompt_freq": -0.9933333333333333
+    },
+    {
+      "feature_id": 2829,
+      "delta_mean_active": 12.806640625,
+      "delta_token_freq": -9.087604507451835e-05,
+      "delta_prompt_freq": -0.0033333333333333335
+    },
+    {
+      "feature_id": 9050,
+      "delta_mean_active": 11.494153440780838,
+      "delta_token_freq": -0.022537259178480554,
+      "delta_prompt_freq": -0.8133333333333332
+    },
+    {
+      "feature_id": 6545,
+      "delta_mean_active": 11.350260416666666,
+      "delta_token_freq": -0.0004543802253725918,
+      "delta_prompt_freq": -0.01666666666666667
+    },
+    {
+      "feature_id": 13490,
+      "delta_mean_active": 8.736328125,
+      "delta_token_freq": -9.087604507451835e-05,
+      "delta_prompt_freq": -0.0033333333333333335
+    },
+    {
+      "feature_id": 5206,
+      "delta_mean_active": 8.6484375,
+      "delta_token_freq": 9.087604507451835e-05,
+      "delta_prompt_freq": 0.0033333333333333335
+    },
+    {
+      "feature_id": 11331,
+      "delta_mean_active": 8.282095053528487,
+      "delta_token_freq": -0.027353689567430024,
+      "delta_prompt_freq": -0.96
+    },
+    {
+      "feature_id": 3134,
+      "delta_mean_active": 8.2314453125,
+      "delta_token_freq": -0.00018175209014903676,
+      "delta_prompt_freq": -0.003333333333333334
+    },
+    {
+      "feature_id": 9454,
+      "delta_mean_active": 8.183876835787501,
+      "delta_token_freq": -0.009905488913122505,
+      "delta_prompt_freq": 0.0
+    },
+    {
+      "feature_id": 2491,
+      "delta_mean_active": 8.063846472537877,
+      "delta_token_freq": -0.0009087604507451834,
+      "delta_prompt_freq": -0.03333333333333333
+    },
+    {
+      "feature_id": 284,
+      "delta_mean_active": 7.694921875,
+      "delta_token_freq": -0.0001817520901490367,
+      "delta_prompt_freq": -0.003333333333333334
+    },
+    {
+      "feature_id": 9666,
+      "delta_mean_active": 7.40234375,
+      "delta_token_freq": 0.0001817520901490367,
+      "delta_prompt_freq": 0.006666666666666667
+    },
+    {
+      "feature_id": 8597,
+      "delta_mean_active": 7.377604166666668,
+      "delta_token_freq": -9.087604507451838e-05,
+      "delta_prompt_freq": -0.0033333333333333335
+    },
+    {
+      "feature_id": 15678,
+      "delta_mean_active": 7.0453125,
+      "delta_token_freq": -0.0001817520901490367,
+      "delta_prompt_freq": -0.006666666666666666
+    },
+    {
+      "feature_id": 4231,
+      "delta_mean_active": 6.527018229166668,
+      "delta_token_freq": -9.087604507451833e-05,
+      "delta_prompt_freq": 0.0
+    },
+    {
+      "feature_id": 2312,
+      "delta_mean_active": 6.163845486111111,
+      "delta_token_freq": -0.00018175209014903665,
+      "delta_prompt_freq": -0.003333333333333334
+    },
+    {
+      "feature_id": 13108,
+      "delta_mean_active": 6.142578125,
+      "delta_token_freq": -9.087604507451838e-05,
+      "delta_prompt_freq": -0.0033333333333333335
+    },
+    {
+      "feature_id": 3853,
+      "delta_mean_active": 6.121851325757575,
+      "delta_token_freq": -0.0003635041802980735,
+      "delta_prompt_freq": -0.013333333333333336
+    }
+  ],
+  "top_context_shifted": [
+    {
+      "feature_id": 10,
+      "context_shift": 1.0,
+      "context_jaccard": 0.0,
+      "prompt_flip_rate": 0.0033333333333333335
+    },
+    {
+      "feature_id": 110,
+      "context_shift": 1.0,
+      "context_jaccard": 0.0,
+      "prompt_flip_rate": 0.01
+    },
+    {
+      "feature_id": 193,
+      "context_shift": 1.0,
+      "context_jaccard": 0.0,
+      "prompt_flip_rate": 1.0
+    },
+    {
+      "feature_id": 370,
+      "context_shift": 1.0,
+      "context_jaccard": 0.0,
+      "prompt_flip_rate": 0.006666666666666667
+    },
+    {
+      "feature_id": 375,
+      "context_shift": 1.0,
+      "context_jaccard": 0.0,
+      "prompt_flip_rate": 0.0033333333333333335
+    },
+    {
+      "feature_id": 433,
+      "context_shift": 1.0,
+      "context_jaccard": 0.0,
+      "prompt_flip_rate": 0.0033333333333333335
+    },
+    {
+      "feature_id": 438,
+      "context_shift": 1.0,
+      "context_jaccard": 0.0,
+      "prompt_flip_rate": 0.0033333333333333335
+    },
+    {
+      "feature_id": 468,
+      "context_shift": 1.0,
+      "context_jaccard": 0.0,
+      "prompt_flip_rate": 1.0
+    },
+    {
+      "feature_id": 603,
+      "context_shift": 1.0,
+      "context_jaccard": 0.0,
+      "prompt_flip_rate": 0.0033333333333333335
+    },
+    {
+      "feature_id": 724,
+      "context_shift": 1.0,
+      "context_jaccard": 0.0,
+      "prompt_flip_rate": 0.0033333333333333335
+    },
+    {
+      "feature_id": 989,
+      "context_shift": 1.0,
+      "context_jaccard": 0.0,
+      "prompt_flip_rate": 0.02
+    },
+    {
+      "feature_id": 1000,
+      "context_shift": 1.0,
+      "context_jaccard": 0.0,
+      "prompt_flip_rate": 0.0033333333333333335
+    },
+    {
+      "feature_id": 1049,
+      "context_shift": 1.0,
+      "context_jaccard": 0.0,
+      "prompt_flip_rate": 0.006666666666666667
+    },
+    {
+      "feature_id": 1207,
+      "context_shift": 1.0,
+      "context_jaccard": 0.0,
+      "prompt_flip_rate": 0.0033333333333333335
+    },
+    {
+      "feature_id": 1297,
+      "context_shift": 1.0,
+      "context_jaccard": 0.0,
+      "prompt_flip_rate": 0.0033333333333333335
+    },
+    {
+      "feature_id": 1312,
+      "context_shift": 1.0,
+      "context_jaccard": 0.0,
+      "prompt_flip_rate": 0.0033333333333333335
+    },
+    {
+      "feature_id": 1336,
+      "context_shift": 1.0,
+      "context_jaccard": 0.0,
+      "prompt_flip_rate": 0.0033333333333333335
+    },
+    {
+      "feature_id": 1341,
+      "context_shift": 1.0,
+      "context_jaccard": 0.0,
+      "prompt_flip_rate": 0.006666666666666667
+    },
+    {
+      "feature_id": 1383,
+      "context_shift": 1.0,
+      "context_jaccard": 0.0,
+      "prompt_flip_rate": 0.0033333333333333335
+    },
+    {
+      "feature_id": 1406,
+      "context_shift": 1.0,
+      "context_jaccard": 0.0,
+      "prompt_flip_rate": 0.0033333333333333335
+    }
+  ]
+}

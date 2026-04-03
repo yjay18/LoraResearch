@@ -1,0 +1,471 @@
+{
+  "adapter": "code",
+  "feature_count": 16384,
+  "thresholds": {
+    "effect_quantile": 0.95,
+    "context_quantile": 0.95,
+    "min_present_prompts": 5,
+    "min_context_flip_rate": 0.03,
+    "abs_delta_token_freq_threshold": 0.0045438022537259,
+    "abs_delta_mean_prompt_activation_threshold": 2.5142298299999997,
+    "context_shift_threshold": 0.3737238645553589
+  },
+  "class_counts": {
+    "amplified": 610,
+    "suppressed": 1165,
+    "newly_activated": 296,
+    "killed": 313,
+    "context_shifted": 22,
+    "unchanged": 13978
+  },
+  "class_fractions": {
+    "amplified": 0.0372314453125,
+    "suppressed": 0.07110595703125,
+    "newly_activated": 0.01806640625,
+    "killed": 0.01910400390625,
+    "context_shifted": 0.0013427734375,
+    "unchanged": 0.8531494140625
+  },
+  "top_examples": {
+    "amplified": [
+      {
+        "feature_id": 2009,
+        "classification_score": 36.308055292860885,
+        "delta_token_freq": 0.1045983278807706,
+        "delta_mean_prompt_activation": 33.409225,
+        "delta_prompt_freq": 0.3966666666666667,
+        "adapted_top_prompt_domain": "general",
+        "domain_switch": false
+      },
+      {
+        "feature_id": 6810,
+        "classification_score": 24.615198294103457,
+        "delta_token_freq": 0.0421664849145764,
+        "delta_mean_prompt_activation": 38.556213,
+        "delta_prompt_freq": 0.0,
+        "adapted_top_prompt_domain": "general",
+        "domain_switch": false
+      },
+      {
+        "feature_id": 9059,
+        "classification_score": 22.4558474259293,
+        "delta_token_freq": 0.0733369683751363,
+        "delta_mean_prompt_activation": 15.879492,
+        "delta_prompt_freq": 0.0,
+        "adapted_top_prompt_domain": "math",
+        "domain_switch": false
+      },
+      {
+        "feature_id": 13700,
+        "classification_score": 19.47307983606262,
+        "delta_token_freq": 0.0693384223918575,
+        "delta_mean_prompt_activation": 10.592651,
+        "delta_prompt_freq": 0.0,
+        "adapted_top_prompt_domain": "general",
+        "domain_switch": false
+      },
+      {
+        "feature_id": 10775,
+        "classification_score": 19.16991435146567,
+        "delta_token_freq": 0.0667938931297709,
+        "delta_mean_prompt_activation": 11.238392,
+        "delta_prompt_freq": 0.8966666666666666,
+        "adapted_top_prompt_domain": "math",
+        "domain_switch": false
+      },
+      {
+        "feature_id": 8806,
+        "classification_score": 17.39361930146222,
+        "delta_token_freq": 0.0507997091966557,
+        "delta_mean_prompt_activation": 15.622467,
+        "delta_prompt_freq": 0.0,
+        "adapted_top_prompt_domain": "creative",
+        "domain_switch": true
+      },
+      {
+        "feature_id": 14599,
+        "classification_score": 16.484134558454453,
+        "delta_token_freq": 0.047346419483824,
+        "delta_mean_prompt_activation": 15.246628,
+        "delta_prompt_freq": 0.0,
+        "adapted_top_prompt_domain": "math",
+        "domain_switch": false
+      },
+      {
+        "feature_id": 15311,
+        "classification_score": 13.683275775389278,
+        "delta_token_freq": 0.0500727008360596,
+        "delta_mean_prompt_activation": 6.6960874,
+        "delta_prompt_freq": 0.83,
+        "adapted_top_prompt_domain": "math",
+        "domain_switch": false
+      },
+      {
+        "feature_id": 8675,
+        "classification_score": 13.5103040449568,
+        "delta_token_freq": 0.0469829153035259,
+        "delta_mean_prompt_activation": 7.970873,
+        "delta_prompt_freq": 0.5466666666666667,
+        "adapted_top_prompt_domain": "code",
+        "domain_switch": false
+      },
+      {
+        "feature_id": 14093,
+        "classification_score": 11.244089686820736,
+        "delta_token_freq": 0.0293529625590694,
+        "delta_mean_prompt_activation": 12.028301,
+        "delta_prompt_freq": 0.0,
+        "adapted_top_prompt_domain": "code",
+        "domain_switch": false
+      }
+    ],
+    "suppressed": [
+      {
+        "feature_id": 7541,
+        "classification_score": 60.48149430730455,
+        "delta_token_freq": -0.1403126135950563,
+        "delta_mean_prompt_activation": -74.42496,
+        "delta_prompt_freq": -0.0333333333333333,
+        "base_top_prompt_domain": "math",
+        "domain_switch": false
+      },
+      {
+        "feature_id": 1041,
+        "classification_score": 40.20948537906738,
+        "delta_token_freq": -0.0377135587059251,
+        "delta_mean_prompt_activation": -80.22778,
+        "delta_prompt_freq": 0.0,
+        "base_top_prompt_domain": "math",
+        "domain_switch": false
+      },
+      {
+        "feature_id": 11306,
+        "classification_score": 27.199170284285472,
+        "delta_token_freq": -0.0727008360596146,
+        "delta_mean_prompt_activation": -28.157288,
+        "delta_prompt_freq": 0.0,
+        "base_top_prompt_domain": "creative",
+        "domain_switch": true
+      },
+      {
+        "feature_id": 10708,
+        "classification_score": 15.145110885666373,
+        "delta_token_freq": -0.0489821882951654,
+        "delta_mean_prompt_activation": -10.974892,
+        "delta_prompt_freq": -0.0999999999999999,
+        "base_top_prompt_domain": "code",
+        "domain_switch": false
+      },
+      {
+        "feature_id": 11087,
+        "classification_score": 13.040848377811189,
+        "delta_token_freq": 0.0,
+        "delta_mean_prompt_activation": -32.78769,
+        "delta_prompt_freq": 0.0,
+        "base_top_prompt_domain": "safety",
+        "domain_switch": false
+      },
+      {
+        "feature_id": 4681,
+        "classification_score": 11.762344537690915,
+        "delta_token_freq": -0.0398945837877135,
+        "delta_mean_prompt_activation": -7.4982996,
+        "delta_prompt_freq": -0.2933333333333333,
+        "base_top_prompt_domain": "code",
+        "domain_switch": false
+      },
+      {
+        "feature_id": 13860,
+        "classification_score": 10.986453814287948,
+        "delta_token_freq": -0.0239003998545983,
+        "delta_mean_prompt_activation": -14.397621,
+        "delta_prompt_freq": 0.0,
+        "base_top_prompt_domain": "general",
+        "domain_switch": false
+      },
+      {
+        "feature_id": 5472,
+        "classification_score": 10.668246578237465,
+        "delta_token_freq": -0.0352599054889131,
+        "delta_mean_prompt_activation": -7.3120003,
+        "delta_prompt_freq": -0.0833333333333333,
+        "base_top_prompt_domain": "creative",
+        "domain_switch": false
+      },
+      {
+        "feature_id": 1178,
+        "classification_score": 10.288730445935407,
+        "delta_token_freq": 0.0,
+        "delta_mean_prompt_activation": -25.868233,
+        "delta_prompt_freq": 0.0,
+        "base_top_prompt_domain": "creative",
+        "domain_switch": false
+      },
+      {
+        "feature_id": 2617,
+        "classification_score": 9.839570378655502,
+        "delta_token_freq": -0.0358051617593602,
+        "delta_mean_prompt_activation": -4.9268103,
+        "delta_prompt_freq": -0.6466666666666667,
+        "base_top_prompt_domain": "medical",
+        "domain_switch": true
+      }
+    ],
+    "newly_activated": [
+      {
+        "feature_id": 8569,
+        "classification_score": 300.0,
+        "base_prompt_count": 0,
+        "adapted_prompt_count": 300,
+        "delta_token_freq": 0.02735368956743,
+        "adapted_top_prompt_domain": "creative"
+      },
+      {
+        "feature_id": 11848,
+        "classification_score": 300.0,
+        "base_prompt_count": 0,
+        "adapted_prompt_count": 300,
+        "delta_token_freq": 0.02735368956743,
+        "adapted_top_prompt_domain": "code"
+      },
+      {
+        "feature_id": 12722,
+        "classification_score": 300.0,
+        "base_prompt_count": 0,
+        "adapted_prompt_count": 300,
+        "delta_token_freq": 0.0272628135223555,
+        "adapted_top_prompt_domain": "math"
+      },
+      {
+        "feature_id": 16162,
+        "classification_score": 300.0,
+        "base_prompt_count": 0,
+        "adapted_prompt_count": 300,
+        "delta_token_freq": 0.0272628135223555,
+        "adapted_top_prompt_domain": "math"
+      },
+      {
+        "feature_id": 2321,
+        "classification_score": 298.0,
+        "base_prompt_count": 2,
+        "adapted_prompt_count": 300,
+        "delta_token_freq": 0.0270810614322064,
+        "adapted_top_prompt_domain": "math"
+      },
+      {
+        "feature_id": 1019,
+        "classification_score": 296.0,
+        "base_prompt_count": 4,
+        "adapted_prompt_count": 300,
+        "delta_token_freq": 0.02735368956743,
+        "adapted_top_prompt_domain": "general"
+      },
+      {
+        "feature_id": 4923,
+        "classification_score": 296.0,
+        "base_prompt_count": 4,
+        "adapted_prompt_count": 300,
+        "delta_token_freq": 0.0271719374772809,
+        "adapted_top_prompt_domain": "general"
+      },
+      {
+        "feature_id": 6957,
+        "classification_score": 296.0,
+        "base_prompt_count": 4,
+        "adapted_prompt_count": 300,
+        "delta_token_freq": 0.0279898218829516,
+        "adapted_top_prompt_domain": "code"
+      },
+      {
+        "feature_id": 4201,
+        "classification_score": 112.0,
+        "base_prompt_count": 1,
+        "adapted_prompt_count": 113,
+        "delta_token_freq": 0.010178117048346,
+        "adapted_top_prompt_domain": "safety"
+      },
+      {
+        "feature_id": 7286,
+        "classification_score": 60.0,
+        "base_prompt_count": 2,
+        "adapted_prompt_count": 62,
+        "delta_token_freq": 0.0054525627044711,
+        "adapted_top_prompt_domain": "code"
+      }
+    ],
+    "killed": [
+      {
+        "feature_id": 135,
+        "classification_score": 300.0,
+        "base_prompt_count": 300,
+        "adapted_prompt_count": 0,
+        "delta_token_freq": -0.0272628135223555,
+        "base_top_prompt_domain": "general"
+      },
+      {
+        "feature_id": 1744,
+        "classification_score": 300.0,
+        "base_prompt_count": 300,
+        "adapted_prompt_count": 0,
+        "delta_token_freq": -0.0272628135223555,
+        "base_top_prompt_domain": "code"
+      },
+      {
+        "feature_id": 2456,
+        "classification_score": 300.0,
+        "base_prompt_count": 300,
+        "adapted_prompt_count": 0,
+        "delta_token_freq": -0.0272628135223555,
+        "base_top_prompt_domain": "creative"
+      },
+      {
+        "feature_id": 2594,
+        "classification_score": 300.0,
+        "base_prompt_count": 300,
+        "adapted_prompt_count": 0,
+        "delta_token_freq": -0.0272628135223555,
+        "base_top_prompt_domain": "safety"
+      },
+      {
+        "feature_id": 2711,
+        "classification_score": 300.0,
+        "base_prompt_count": 300,
+        "adapted_prompt_count": 0,
+        "delta_token_freq": -0.027535441657579,
+        "base_top_prompt_domain": "code"
+      },
+      {
+        "feature_id": 2908,
+        "classification_score": 300.0,
+        "base_prompt_count": 300,
+        "adapted_prompt_count": 0,
+        "delta_token_freq": -0.0272628135223555,
+        "base_top_prompt_domain": "general"
+      },
+      {
+        "feature_id": 4323,
+        "classification_score": 300.0,
+        "base_prompt_count": 300,
+        "adapted_prompt_count": 0,
+        "delta_token_freq": -0.02735368956743,
+        "base_top_prompt_domain": "general"
+      },
+      {
+        "feature_id": 4368,
+        "classification_score": 300.0,
+        "base_prompt_count": 300,
+        "adapted_prompt_count": 0,
+        "delta_token_freq": -0.0272628135223555,
+        "base_top_prompt_domain": "code"
+      },
+      {
+        "feature_id": 4447,
+        "classification_score": 300.0,
+        "base_prompt_count": 300,
+        "adapted_prompt_count": 0,
+        "delta_token_freq": -0.02735368956743,
+        "base_top_prompt_domain": "medical"
+      },
+      {
+        "feature_id": 6165,
+        "classification_score": 300.0,
+        "base_prompt_count": 300,
+        "adapted_prompt_count": 0,
+        "delta_token_freq": -0.0272628135223555,
+        "base_top_prompt_domain": "safety"
+      }
+    ],
+    "context_shifted": [
+      {
+        "feature_id": 8032,
+        "classification_score": 1.9805566817213143,
+        "context_shift": 0.7401812970638275,
+        "prompt_flip_rate": 0.11,
+        "base_top_prompt_domain": "general",
+        "adapted_top_prompt_domain": "code",
+        "domain_switch": true
+      },
+      {
+        "feature_id": 3638,
+        "classification_score": 1.661067957077189,
+        "context_shift": 0.620780736207962,
+        "prompt_flip_rate": 0.0333333333333333,
+        "base_top_prompt_domain": "safety",
+        "adapted_top_prompt_domain": "general",
+        "domain_switch": true
+      },
+      {
+        "feature_id": 11892,
+        "classification_score": 1.473442858313958,
+        "context_shift": 0.5506607592105865,
+        "prompt_flip_rate": 0.13,
+        "base_top_prompt_domain": "safety",
+        "adapted_top_prompt_domain": "safety",
+        "domain_switch": false
+      },
+      {
+        "feature_id": 8579,
+        "classification_score": 1.3712478345453925,
+        "context_shift": 0.5124680399894714,
+        "prompt_flip_rate": 0.03,
+        "base_top_prompt_domain": "general",
+        "adapted_top_prompt_domain": "creative",
+        "domain_switch": true
+      },
+      {
+        "feature_id": 3222,
+        "classification_score": 1.3174799674515945,
+        "context_shift": 0.4923737049102783,
+        "prompt_flip_rate": 0.04,
+        "base_top_prompt_domain": "math",
+        "adapted_top_prompt_domain": "math",
+        "domain_switch": false
+      },
+      {
+        "feature_id": 4807,
+        "classification_score": 1.2969807558030675,
+        "context_shift": 0.4847126603126526,
+        "prompt_flip_rate": 0.05,
+        "base_top_prompt_domain": "code",
+        "adapted_top_prompt_domain": "code",
+        "domain_switch": false
+      },
+      {
+        "feature_id": 3211,
+        "classification_score": 1.2845337976786773,
+        "context_shift": 0.4800609350204468,
+        "prompt_flip_rate": 0.0466666666666666,
+        "base_top_prompt_domain": "creative",
+        "adapted_top_prompt_domain": "creative",
+        "domain_switch": false
+      },
+      {
+        "feature_id": 5571,
+        "classification_score": 1.2440821008330718,
+        "context_shift": 0.4649431705474853,
+        "prompt_flip_rate": 0.04,
+        "base_top_prompt_domain": "code",
+        "adapted_top_prompt_domain": "code",
+        "domain_switch": false
+      },
+      {
+        "feature_id": 5690,
+        "classification_score": 1.1865761431415334,
+        "context_shift": 0.4434518218040466,
+        "prompt_flip_rate": 0.09,
+        "base_top_prompt_domain": "code",
+        "adapted_top_prompt_domain": "general",
+        "domain_switch": true
+      },
+      {
+        "feature_id": 4128,
+        "classification_score": 1.1782741306842086,
+        "context_shift": 0.4403491616249084,
+        "prompt_flip_rate": 0.0433333333333333,
+        "base_top_prompt_domain": "general",
+        "adapted_top_prompt_domain": "general",
+        "domain_switch": false
+      }
+    ]
+  }
+}

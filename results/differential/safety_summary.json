@@ -1,0 +1,498 @@
+{
+  "adapter": "safety",
+  "feature_count": 16384,
+  "features_with_domain_switch": 1785,
+  "mean_delta_token_freq": -0.00021547562250090875,
+  "mean_abs_delta_token_freq": 0.0007802227634553344,
+  "mean_delta_mean_active": -0.11095759438654354,
+  "mean_context_shift": 0.04131169562015202,
+  "max_context_shift": 1.0,
+  "top_amplified_by_frequency": [
+    {
+      "feature_id": 1041,
+      "delta_token_freq": 0.08160668847691749,
+      "delta_prompt_freq": 0.0,
+      "delta_mean_active": -10.044625323747027
+    },
+    {
+      "feature_id": 11264,
+      "delta_token_freq": 0.051981097782624504,
+      "delta_prompt_freq": 0.3766666666666667,
+      "delta_mean_active": -0.06487983284775378
+    },
+    {
+      "feature_id": 8215,
+      "delta_token_freq": 0.0480734278444202,
+      "delta_prompt_freq": 0.08333333333333337,
+      "delta_mean_active": -0.3966492895185638
+    },
+    {
+      "feature_id": 13295,
+      "delta_token_freq": 0.040803344238458744,
+      "delta_prompt_freq": 0.0,
+      "delta_mean_active": 0.026213696547694454
+    },
+    {
+      "feature_id": 7708,
+      "delta_token_freq": 0.036713922210105415,
+      "delta_prompt_freq": 0.08333333333333331,
+      "delta_mean_active": 0.0986155120920742
+    },
+    {
+      "feature_id": 13700,
+      "delta_token_freq": 0.033896764812795355,
+      "delta_prompt_freq": 0.0,
+      "delta_mean_active": -4.678120810834788
+    },
+    {
+      "feature_id": 14252,
+      "delta_token_freq": 0.03144311159578335,
+      "delta_prompt_freq": 0.0,
+      "delta_mean_active": 0.004306688056246344
+    },
+    {
+      "feature_id": 5637,
+      "delta_token_freq": 0.03107960741548528,
+      "delta_prompt_freq": 0.1266666666666667,
+      "delta_mean_active": -0.013529286673469976
+    },
+    {
+      "feature_id": 13209,
+      "delta_token_freq": 0.030079970919665574,
+      "delta_prompt_freq": 0.7966666666666666,
+      "delta_mean_active": -0.6590588693928368
+    },
+    {
+      "feature_id": 9080,
+      "delta_token_freq": 0.028535078153398764,
+      "delta_prompt_freq": 0.9299999999999999,
+      "delta_mean_active": -0.5327659429505816
+    },
+    {
+      "feature_id": 12684,
+      "delta_token_freq": 0.027989821882951658,
+      "delta_prompt_freq": 0.9299999999999999,
+      "delta_mean_active": -1.5276249459002202
+    },
+    {
+      "feature_id": 14632,
+      "delta_token_freq": 0.02798982188295164,
+      "delta_prompt_freq": 0.0,
+      "delta_mean_active": 0.05845385896345334
+    },
+    {
+      "feature_id": 7721,
+      "delta_token_freq": 0.02762631770265358,
+      "delta_prompt_freq": 0.9766666666666667,
+      "delta_mean_active": -1.5291641736471213
+    },
+    {
+      "feature_id": 15939,
+      "delta_token_freq": 0.02744456561250455,
+      "delta_prompt_freq": 0.05999999999999994,
+      "delta_mean_active": 0.011402250191279606
+    },
+    {
+      "feature_id": 7263,
+      "delta_token_freq": 0.027444565612504544,
+      "delta_prompt_freq": 0.9866666666666667,
+      "delta_mean_active": -4.656178127232941
+    },
+    {
+      "feature_id": 6802,
+      "delta_token_freq": 0.027353689567430027,
+      "delta_prompt_freq": 0.9833333333333333,
+      "delta_mean_active": -0.8460880242263844
+    },
+    {
+      "feature_id": 6957,
+      "delta_token_freq": 0.027353689567430027,
+      "delta_prompt_freq": 0.9866666666666667,
+      "delta_mean_active": -1.4981021402733123
+    },
+    {
+      "feature_id": 1019,
+      "delta_token_freq": 0.027262813522355506,
+      "delta_prompt_freq": 0.9866666666666667,
+      "delta_mean_active": -0.3527514965503249
+    },
+    {
+      "feature_id": 6074,
+      "delta_token_freq": 0.027262813522355506,
+      "delta_prompt_freq": 0.98,
+      "delta_mean_active": -4.09771966314935
+    },
+    {
+      "feature_id": 15137,
+      "delta_token_freq": 0.02717193747728099,
+      "delta_prompt_freq": 0.95,
+      "delta_mean_active": -1.0313605463145628
+    }
+  ],
+  "top_suppressed_by_frequency": [
+    {
+      "feature_id": 6810,
+      "delta_token_freq": -0.06370410759723738,
+      "delta_prompt_freq": -0.006666666666666599,
+      "delta_mean_active": -1.8515361691590009
+    },
+    {
+      "feature_id": 5472,
+      "delta_token_freq": -0.051890221737549994,
+      "delta_prompt_freq": -0.10666666666666669,
+      "delta_mean_active": -0.43338029109196974
+    },
+    {
+      "feature_id": 2291,
+      "delta_token_freq": -0.04925481643038898,
+      "delta_prompt_freq": 0.0,
+      "delta_mean_active": -0.13810307196246718
+    },
+    {
+      "feature_id": 11412,
+      "delta_token_freq": -0.04616503089785534,
+      "delta_prompt_freq": -0.040000000000000036,
+      "delta_mean_active": -0.1321052867509538
+    },
+    {
+      "feature_id": 1380,
+      "delta_token_freq": -0.032079243911304976,
+      "delta_prompt_freq": -0.15999999999999998,
+      "delta_mean_active": -0.2142926930786988
+    },
+    {
+      "feature_id": 14902,
+      "delta_token_freq": -0.030079970919665574,
+      "delta_prompt_freq": -0.88,
+      "delta_mean_active": 0.9631414963189222
+    },
+    {
+      "feature_id": 3479,
+      "delta_token_freq": -0.029898218829516536,
+      "delta_prompt_freq": -0.8433333333333333,
+      "delta_mean_active": 0.7308099188263029
+    },
+    {
+      "feature_id": 14318,
+      "delta_token_freq": -0.029534714649218464,
+      "delta_prompt_freq": -0.8966666666666667,
+      "delta_mean_active": 4.396893204120729
+    },
+    {
+      "feature_id": 7660,
+      "delta_token_freq": -0.029080334423845878,
+      "delta_prompt_freq": -0.9433333333333334,
+      "delta_mean_active": 0.8456756280045492
+    },
+    {
+      "feature_id": 5153,
+      "delta_token_freq": -0.029080334423845874,
+      "delta_prompt_freq": -0.71,
+      "delta_mean_active": 1.3797147148696833
+    },
+    {
+      "feature_id": 16358,
+      "delta_token_freq": -0.028989458378771354,
+      "delta_prompt_freq": -0.23666666666666664,
+      "delta_mean_active": -0.7443305646222873
+    },
+    {
+      "feature_id": 949,
+      "delta_token_freq": -0.028807706288622323,
+      "delta_prompt_freq": -0.8033333333333333,
+      "delta_mean_active": 0.5244568743131031
+    },
+    {
+      "feature_id": 6277,
+      "delta_token_freq": -0.028716830243547802,
+      "delta_prompt_freq": -0.9966666666666667,
+      "delta_mean_active": -0.7458476945465686
+    },
+    {
+      "feature_id": 15120,
+      "delta_token_freq": -0.0287168302435478,
+      "delta_prompt_freq": -0.99,
+      "delta_mean_active": 2.303593346625484
+    },
+    {
+      "feature_id": 11783,
+      "delta_token_freq": -0.028625954198473285,
+      "delta_prompt_freq": -0.8966666666666667,
+      "delta_mean_active": 0.4923975759290329
+    },
+    {
+      "feature_id": 8375,
+      "delta_token_freq": -0.028535078153398757,
+      "delta_prompt_freq": -0.16666666666666674,
+      "delta_mean_active": 0.07244370590777383
+    },
+    {
+      "feature_id": 15996,
+      "delta_token_freq": -0.028444202108324244,
+      "delta_prompt_freq": -0.89,
+      "delta_mean_active": 0.8456107897636214
+    },
+    {
+      "feature_id": 4952,
+      "delta_token_freq": -0.028353326063249727,
+      "delta_prompt_freq": -1.0,
+      "delta_mean_active": -3.512294671474359
+    },
+    {
+      "feature_id": 6044,
+      "delta_token_freq": -0.028353326063249727,
+      "delta_prompt_freq": -0.86,
+      "delta_mean_active": 1.8126151920472133
+    },
+    {
+      "feature_id": 13538,
+      "delta_token_freq": -0.028353326063249727,
+      "delta_prompt_freq": -0.9233333333333333,
+      "delta_mean_active": 5.085746433423913
+    }
+  ],
+  "top_amplified_by_magnitude": [
+    {
+      "feature_id": 1846,
+      "delta_mean_active": 25.96349028468969,
+      "delta_token_freq": -0.026899309342057434,
+      "delta_prompt_freq": -0.8466666666666667
+    },
+    {
+      "feature_id": 7271,
+      "delta_mean_active": 19.5712890625,
+      "delta_token_freq": -9.087604507451835e-05,
+      "delta_prompt_freq": -0.0033333333333333335
+    },
+    {
+      "feature_id": 7613,
+      "delta_mean_active": 17.5146484375,
+      "delta_token_freq": -9.087604507451835e-05,
+      "delta_prompt_freq": -0.0033333333333333335
+    },
+    {
+      "feature_id": 2829,
+      "delta_mean_active": 13.931640625,
+      "delta_token_freq": -9.087604507451835e-05,
+      "delta_prompt_freq": -0.0033333333333333335
+    },
+    {
+      "feature_id": 9050,
+      "delta_mean_active": 13.859518024114173,
+      "delta_token_freq": -0.02262813522355507,
+      "delta_prompt_freq": -0.8166666666666667
+    },
+    {
+      "feature_id": 9570,
+      "delta_mean_active": 13.598263888888889,
+      "delta_token_freq": -0.027262813522355506,
+      "delta_prompt_freq": -0.9733333333333334
+    },
+    {
+      "feature_id": 13831,
+      "delta_mean_active": 13.185546875,
+      "delta_token_freq": -9.087604507451835e-05,
+      "delta_prompt_freq": -0.0033333333333333335
+    },
+    {
+      "feature_id": 8783,
+      "delta_mean_active": 13.16114882172131,
+      "delta_token_freq": -0.027262813522355506,
+      "delta_prompt_freq": -0.9866666666666667
+    },
+    {
+      "feature_id": 6150,
+      "delta_mean_active": 12.2646484375,
+      "delta_token_freq": -9.087604507451835e-05,
+      "delta_prompt_freq": -0.0033333333333333335
+    },
+    {
+      "feature_id": 6545,
+      "delta_mean_active": 10.751627604166666,
+      "delta_token_freq": -0.0004543802253725918,
+      "delta_prompt_freq": -0.01666666666666667
+    },
+    {
+      "feature_id": 9880,
+      "delta_mean_active": 10.674265008223685,
+      "delta_token_freq": -0.02726281352235551,
+      "delta_prompt_freq": -0.99
+    },
+    {
+      "feature_id": 12255,
+      "delta_mean_active": 9.194010416666668,
+      "delta_token_freq": -9.087604507451838e-05,
+      "delta_prompt_freq": 0.0
+    },
+    {
+      "feature_id": 8565,
+      "delta_mean_active": 8.923604149959907,
+      "delta_token_freq": -0.002544529262086514,
+      "delta_prompt_freq": 0.0
+    },
+    {
+      "feature_id": 11331,
+      "delta_mean_active": 8.153533472646135,
+      "delta_token_freq": -0.027353689567430024,
+      "delta_prompt_freq": -0.96
+    },
+    {
+      "feature_id": 13490,
+      "delta_mean_active": 8.095703125,
+      "delta_token_freq": -9.087604507451835e-05,
+      "delta_prompt_freq": -0.0033333333333333335
+    },
+    {
+      "feature_id": 8597,
+      "delta_mean_active": 8.078776041666668,
+      "delta_token_freq": -9.087604507451838e-05,
+      "delta_prompt_freq": -0.0033333333333333335
+    },
+    {
+      "feature_id": 14026,
+      "delta_mean_active": 8.037109375,
+      "delta_token_freq": -9.087604507451838e-05,
+      "delta_prompt_freq": -0.003333333333333333
+    },
+    {
+      "feature_id": 6118,
+      "delta_mean_active": 7.3206416273472215,
+      "delta_token_freq": -0.024445656125045435,
+      "delta_prompt_freq": 0.0
+    },
+    {
+      "feature_id": 14251,
+      "delta_mean_active": 6.968852780177407,
+      "delta_token_freq": -0.007724463831334058,
+      "delta_prompt_freq": 0.0
+    },
+    {
+      "feature_id": 4231,
+      "delta_mean_active": 5.9462890625,
+      "delta_token_freq": -9.087604507451833e-05,
+      "delta_prompt_freq": 0.0
+    }
+  ],
+  "top_context_shifted": [
+    {
+      "feature_id": 36,
+      "context_shift": 1.0,
+      "context_jaccard": 0.0,
+      "prompt_flip_rate": 0.0033333333333333335
+    },
+    {
+      "feature_id": 193,
+      "context_shift": 1.0,
+      "context_jaccard": 0.0,
+      "prompt_flip_rate": 1.0
+    },
+    {
+      "feature_id": 375,
+      "context_shift": 1.0,
+      "context_jaccard": 0.0,
+      "prompt_flip_rate": 0.0033333333333333335
+    },
+    {
+      "feature_id": 835,
+      "context_shift": 1.0,
+      "context_jaccard": 0.0,
+      "prompt_flip_rate": 0.0033333333333333335
+    },
+    {
+      "feature_id": 892,
+      "context_shift": 1.0,
+      "context_jaccard": 0.0,
+      "prompt_flip_rate": 0.0033333333333333335
+    },
+    {
+      "feature_id": 920,
+      "context_shift": 1.0,
+      "context_jaccard": 0.0,
+      "prompt_flip_rate": 0.006666666666666667
+    },
+    {
+      "feature_id": 982,
+      "context_shift": 1.0,
+      "context_jaccard": 0.0,
+      "prompt_flip_rate": 0.0033333333333333335
+    },
+    {
+      "feature_id": 989,
+      "context_shift": 1.0,
+      "context_jaccard": 0.0,
+      "prompt_flip_rate": 0.0033333333333333335
+    },
+    {
+      "feature_id": 1040,
+      "context_shift": 1.0,
+      "context_jaccard": 0.0,
+      "prompt_flip_rate": 0.0033333333333333335
+    },
+    {
+      "feature_id": 1054,
+      "context_shift": 1.0,
+      "context_jaccard": 0.0,
+      "prompt_flip_rate": 0.0033333333333333335
+    },
+    {
+      "feature_id": 1107,
+      "context_shift": 1.0,
+      "context_jaccard": 0.0,
+      "prompt_flip_rate": 0.006666666666666667
+    },
+    {
+      "feature_id": 1217,
+      "context_shift": 1.0,
+      "context_jaccard": 0.0,
+      "prompt_flip_rate": 0.0033333333333333335
+    },
+    {
+      "feature_id": 1297,
+      "context_shift": 1.0,
+      "context_jaccard": 0.0,
+      "prompt_flip_rate": 0.03
+    },
+    {
+      "feature_id": 1341,
+      "context_shift": 1.0,
+      "context_jaccard": 0.0,
+      "prompt_flip_rate": 0.0033333333333333335
+    },
+    {
+      "feature_id": 1548,
+      "context_shift": 1.0,
+      "context_jaccard": 0.0,
+      "prompt_flip_rate": 0.0033333333333333335
+    },
+    {
+      "feature_id": 1732,
+      "context_shift": 1.0,
+      "context_jaccard": 0.0,
+      "prompt_flip_rate": 0.0033333333333333335
+    },
+    {
+      "feature_id": 1743,
+      "context_shift": 1.0,
+      "context_jaccard": 0.0,
+      "prompt_flip_rate": 0.0033333333333333335
+    },
+    {
+      "feature_id": 1744,
+      "context_shift": 1.0,
+      "context_jaccard": 0.0,
+      "prompt_flip_rate": 1.0
+    },
+    {
+      "feature_id": 1781,
+      "context_shift": 1.0,
+      "context_jaccard": 0.0,
+      "prompt_flip_rate": 0.0033333333333333335
+    },
+    {
+      "feature_id": 1809,
+      "context_shift": 1.0,
+      "context_jaccard": 0.0,
+      "prompt_flip_rate": 0.0033333333333333335
+    }
+  ]
+}

@@ -17,6 +17,7 @@ env/
 .idea/
 *.swp
 *.swo
+.claude/
 
 # OS
 .DS_Store
@@ -31,6 +32,7 @@ desktop.ini
 *.npz
 *.mmap
 activations/
+data/sae_features/
 
 # HuggingFace cache
 .cache/
@@ -38,6 +40,8 @@ activations/
 # Results (keep structure, ignore large outputs selectively)
 results/*.npy
 results/*.npz
+results/differential/*.csv
+results/classification/*.csv
 
 # Secrets
 .env
