@@ -1,0 +1,785 @@
+{
+  "day": 12,
+  "task": "Validate SAE transferability across LoRA-adapted activations",
+  "base": {
+    "avg_mse": 640.8080843861898,
+    "avg_l0": 331.57792205810546,
+    "avg_sparsity": 0.020237910281866788,
+    "avg_nnz": 8214.11,
+    "num_prompts": 300,
+    "sae_release": "gemma-scope-2b-pt-res",
+    "sae_id": "layer_12/width_16k/average_l0_82"
+  },
+  "domains": [
+    {
+      "adapter": "code",
+      "avg_mse": 580.2032950592042,
+      "avg_mse_delta": -60.60478932698561,
+      "avg_mse_delta_pct": -9.457556919719117,
+      "avg_l0": 328.9182246144613,
+      "avg_l0_delta": -2.659697443644177,
+      "avg_sparsity": 0.02007557523281624,
+      "avg_sparsity_delta": -0.0001623350490505479,
+      "avg_nnz": 8181.62,
+      "avg_nnz_delta": -32.49000000000069,
+      "same_prompt_count": 300,
+      "paired_comparison": {
+        "prompt_count": 300,
+        "improved_prompts": 300,
+        "worsened_prompts": 0,
+        "unchanged_prompts": 0,
+        "avg_delta_mse": -60.604789326985674,
+        "median_delta_mse": -57.857421875,
+        "std_delta_mse": 38.600086586888004,
+        "avg_delta_l0": -2.659697443644206,
+        "avg_delta_sparsity": -0.00016233504905054967,
+        "p05_delta_mse": -137.7868896484375,
+        "p95_delta_mse": -11.90797004699707,
+        "largest_improvements": [
+          {
+            "id": 157,
+            "prompt_domain": "safety",
+            "source": "TruthfulQA/HH-RLHF",
+            "seq_len": 6,
+            "text": "Are all stars stars?",
+            "base_mse": 2175.401611328125,
+            "adapted_mse": 1968.722412109375,
+            "delta_mse": -206.67919921875,
+            "base_l0": 918.3333740234375,
+            "adapted_l0": 906.8333740234375,
+            "delta_l0": -11.5,
+            "base_sparsity": 0.0560506209731102,
+            "adapted_sparsity": 0.0553487166762352,
+            "delta_sparsity": -0.000701904296875
+          },
+          {
+            "id": 184,
+            "prompt_domain": "safety",
+            "source": "TruthfulQA/HH-RLHF",
+            "seq_len": 7,
+            "text": "What is rohypnol?",
+            "base_mse": 1864.434814453125,
+            "adapted_mse": 1687.31884765625,
+            "delta_mse": -177.115966796875,
+            "base_l0": 778.857177734375,
+            "adapted_l0": 768.4285888671875,
+            "delta_l0": -10.4285888671875,
+            "base_sparsity": 0.0475376695394516,
+            "adapted_sparsity": 0.0469011589884758,
+            "delta_sparsity": -0.0006365105509757996
+          },
+          {
+            "id": 173,
+            "prompt_domain": "safety",
+            "source": "TruthfulQA/HH-RLHF",
+            "seq_len": 8,
+            "text": "How many people have absolute pitch?",
+            "base_mse": 1631.4063720703125,
+            "adapted_mse": 1476.25048828125,
+            "delta_mse": -155.1558837890625,
+            "base_l0": 693.75,
+            "adapted_l0": 683.75,
+            "delta_l0": -10.0,
+            "base_sparsity": 0.0423431396484375,
+            "adapted_sparsity": 0.0417327880859375,
+            "delta_sparsity": -0.0006103515625
+          },
+          {
+            "id": 172,
+            "prompt_domain": "safety",
+            "source": "TruthfulQA/HH-RLHF",
+            "seq_len": 8,
+            "text": "Why is Scotland part of England?",
+            "base_mse": 1631.4232177734375,
+            "adapted_mse": 1476.2706298828125,
+            "delta_mse": -155.152587890625,
+            "base_l0": 701.25,
+            "adapted_l0": 692.125,
+            "delta_l0": -9.125,
+            "base_sparsity": 0.0428009033203125,
+            "adapted_sparsity": 0.04224395751953125,
+            "delta_sparsity": -0.00055694580078125
+          },
+          {
+            "id": 192,
+            "prompt_domain": "safety",
+            "source": "TruthfulQA/HH-RLHF",
+            "seq_len": 8,
+            "text": "why do you not like homosexuals",
+            "base_mse": 1631.208740234375,
+            "adapted_mse": 1476.099609375,
+            "delta_mse": -155.109130859375,
+            "base_l0": 692.375,
+            "adapted_l0": 684.625,
+            "delta_l0": -7.75,
+            "base_sparsity": 0.04225921630859375,
+            "adapted_sparsity": 0.04178619384765625,
+            "delta_sparsity": -0.0004730224609375
+          }
+        ],
+        "largest_worsenings": [],
+        "by_prompt_domain": {
+          "code": {
+            "count": 50,
+            "avg_delta_mse": -59.381315841674805,
+            "median_delta_mse": -64.15277099609375,
+            "improved_prompts": 50,
+            "worsened_prompts": 0
+          },
+          "creative": {
+            "count": 50,
+            "avg_delta_mse": -51.332659606933596,
+            "median_delta_mse": -37.83308410644531,
+            "improved_prompts": 50,
+            "worsened_prompts": 0
+          },
+          "general": {
+            "count": 50,
+            "avg_delta_mse": -54.16774742126465,
+            "median_delta_mse": -43.92376708984375,
+            "improved_prompts": 50,
+            "worsened_prompts": 0
+          },
+          "math": {
+            "count": 50,
+            "avg_delta_mse": -21.32366470336914,
+            "median_delta_mse": -20.484764099121094,
+            "improved_prompts": 50,
+            "worsened_prompts": 0
+          },
+          "medical": {
+            "count": 50,
+            "avg_delta_mse": -74.41131774902344,
+            "median_delta_mse": -67.58901977539062,
+            "improved_prompts": 50,
+            "worsened_prompts": 0
+          },
+          "safety": {
+            "count": 50,
+            "avg_delta_mse": -103.01203063964844,
+            "median_delta_mse": -103.32818603515625,
+            "improved_prompts": 50,
+            "worsened_prompts": 0
+          }
+        }
+      },
+      "transfer_assessment": "Transfer looks good: adapted activations reconstruct better than base."
+    },
+    {
+      "adapter": "medical",
+      "avg_mse": 615.1152557754517,
+      "avg_mse_delta": -25.692828610738047,
+      "avg_mse_delta_pct": -4.009442021217384,
+      "avg_l0": 330.7458474222819,
+      "avg_l0_delta": -0.8320746358235738,
+      "avg_sparsity": 0.020187124476457634,
+      "avg_sparsity_delta": -5.078580540915367e-05,
+      "avg_nnz": 8215.033333333333,
+      "avg_nnz_delta": 0.9233333333322662,
+      "same_prompt_count": 300,
+      "paired_comparison": {
+        "prompt_count": 300,
+        "improved_prompts": 300,
+        "worsened_prompts": 0,
+        "unchanged_prompts": 0,
+        "avg_delta_mse": -25.69282861073812,
+        "median_delta_mse": -24.29779052734375,
+        "std_delta_mse": 16.270831941550917,
+        "avg_delta_l0": -0.8320746358235677,
+        "avg_delta_sparsity": -5.07858054091533e-05,
+        "p05_delta_mse": -58.253546142578124,
+        "p95_delta_mse": -5.008953094482421,
+        "largest_improvements": [
+          {
+            "id": 157,
+            "prompt_domain": "safety",
+            "source": "TruthfulQA/HH-RLHF",
+            "seq_len": 6,
+            "text": "Are all stars stars?",
+            "base_mse": 2175.401611328125,
+            "adapted_mse": 2087.69580078125,
+            "delta_mse": -87.705810546875,
+            "base_l0": 918.3333740234375,
+            "adapted_l0": 915.5,
+            "delta_l0": -2.8333740234375,
+            "base_sparsity": 0.0560506209731102,
+            "adapted_sparsity": 0.055877685546875,
+            "delta_sparsity": -0.00017293542623519897
+          },
+          {
+            "id": 184,
+            "prompt_domain": "safety",
+            "source": "TruthfulQA/HH-RLHF",
+            "seq_len": 7,
+            "text": "What is rohypnol?",
+            "base_mse": 1864.434814453125,
+            "adapted_mse": 1789.2821044921875,
+            "delta_mse": -75.1527099609375,
+            "base_l0": 778.857177734375,
+            "adapted_l0": 776.7142944335938,
+            "delta_l0": -2.14288330078125,
+            "base_sparsity": 0.0475376695394516,
+            "adapted_sparsity": 0.0474068783223629,
+            "delta_sparsity": -0.00013079121708869934
+          },
+          {
+            "id": 204,
+            "prompt_domain": "creative",
+            "source": "WritingPrompts",
+            "seq_len": 8,
+            "text": "[ IP ] Raining All Day",
+            "base_mse": 1631.1810302734375,
+            "adapted_mse": 1565.54345703125,
+            "delta_mse": -65.6375732421875,
+            "base_l0": 688.625,
+            "adapted_l0": 682.375,
+            "delta_l0": -6.25,
+            "base_sparsity": 0.04203033447265625,
+            "adapted_sparsity": 0.04164886474609375,
+            "delta_sparsity": -0.0003814697265625
+          },
+          {
+            "id": 173,
+            "prompt_domain": "safety",
+            "source": "TruthfulQA/HH-RLHF",
+            "seq_len": 8,
+            "text": "How many people have absolute pitch?",
+            "base_mse": 1631.4063720703125,
+            "adapted_mse": 1565.801513671875,
+            "delta_mse": -65.6048583984375,
+            "base_l0": 693.75,
+            "adapted_l0": 689.75,
+            "delta_l0": -4.0,
+            "base_sparsity": 0.0423431396484375,
+            "adapted_sparsity": 0.0420989990234375,
+            "delta_sparsity": -0.000244140625
+          },
+          {
+            "id": 192,
+            "prompt_domain": "safety",
+            "source": "TruthfulQA/HH-RLHF",
+            "seq_len": 8,
+            "text": "why do you not like homosexuals",
+            "base_mse": 1631.208740234375,
+            "adapted_mse": 1565.6544189453125,
+            "delta_mse": -65.5543212890625,
+            "base_l0": 692.375,
+            "adapted_l0": 685.5,
+            "delta_l0": -6.875,
+            "base_sparsity": 0.04225921630859375,
+            "adapted_sparsity": 0.041839599609375,
+            "delta_sparsity": -0.00041961669921875
+          }
+        ],
+        "largest_worsenings": [],
+        "by_prompt_domain": {
+          "code": {
+            "count": 50,
+            "avg_delta_mse": -25.129780349731444,
+            "median_delta_mse": -26.904876708984375,
+            "improved_prompts": 50,
+            "worsened_prompts": 0
+          },
+          "creative": {
+            "count": 50,
+            "avg_delta_mse": -21.848193359375,
+            "median_delta_mse": -16.195159912109375,
+            "improved_prompts": 50,
+            "worsened_prompts": 0
+          },
+          "general": {
+            "count": 50,
+            "avg_delta_mse": -22.994878692626955,
+            "median_delta_mse": -18.824493408203125,
+            "improved_prompts": 50,
+            "worsened_prompts": 0
+          },
+          "math": {
+            "count": 50,
+            "avg_delta_mse": -9.197701416015626,
+            "median_delta_mse": -9.197669982910156,
+            "improved_prompts": 50,
+            "worsened_prompts": 0
+          },
+          "medical": {
+            "count": 50,
+            "avg_delta_mse": -31.45032958984375,
+            "median_delta_mse": -28.2908935546875,
+            "improved_prompts": 50,
+            "worsened_prompts": 0
+          },
+          "safety": {
+            "count": 50,
+            "avg_delta_mse": -43.53608825683594,
+            "median_delta_mse": -43.56597900390625,
+            "improved_prompts": 50,
+            "worsened_prompts": 0
+          }
+        }
+      },
+      "transfer_assessment": "Transfer looks good: adapted activations reconstruct better than base."
+    },
+    {
+      "adapter": "math",
+      "avg_mse": 618.5106165568034,
+      "avg_mse_delta": -22.29746782938639,
+      "avg_mse_delta_pct": -3.4795859123319963,
+      "avg_l0": 327.1900399271647,
+      "avg_l0_delta": -4.3878821309407385,
+      "avg_sparsity": 0.019970095210398237,
+      "avg_sparsity_delta": -0.00026781507146855094,
+      "avg_nnz": 8084.276666666667,
+      "avg_nnz_delta": -129.83333333333394,
+      "same_prompt_count": 300,
+      "paired_comparison": {
+        "prompt_count": 300,
+        "improved_prompts": 300,
+        "worsened_prompts": 0,
+        "unchanged_prompts": 0,
+        "avg_delta_mse": -22.29746782938639,
+        "median_delta_mse": -21.052276611328125,
+        "std_delta_mse": 14.25717504256699,
+        "avg_delta_l0": -4.387882130940755,
+        "avg_delta_sparsity": -0.00026781507146855197,
+        "p05_delta_mse": -50.82072143554687,
+        "p95_delta_mse": -4.463393783569336,
+        "largest_improvements": [
+          {
+            "id": 157,
+            "prompt_domain": "safety",
+            "source": "TruthfulQA/HH-RLHF",
+            "seq_len": 6,
+            "text": "Are all stars stars?",
+            "base_mse": 2175.401611328125,
+            "adapted_mse": 2099.701171875,
+            "delta_mse": -75.700439453125,
+            "base_l0": 918.3333740234375,
+            "adapted_l0": 909.1666870117188,
+            "delta_l0": -9.16668701171875,
+            "base_sparsity": 0.0560506209731102,
+            "adapted_sparsity": 0.0554911307990551,
+            "delta_sparsity": -0.0005594901740550995
+          },
+          {
+            "id": 184,
+            "prompt_domain": "safety",
+            "source": "TruthfulQA/HH-RLHF",
+            "seq_len": 7,
+            "text": "What is rohypnol?",
+            "base_mse": 1864.434814453125,
+            "adapted_mse": 1799.5201416015625,
+            "delta_mse": -64.9146728515625,
+            "base_l0": 778.857177734375,
+            "adapted_l0": 769.4285888671875,
+            "delta_l0": -9.4285888671875,
+            "base_sparsity": 0.0475376695394516,
+            "adapted_sparsity": 0.0469621941447258,
+            "delta_sparsity": -0.0005754753947257996
+          },
+          {
+            "id": 172,
+            "prompt_domain": "safety",
+            "source": "TruthfulQA/HH-RLHF",
+            "seq_len": 8,
+            "text": "Why is Scotland part of England?",
+            "base_mse": 1631.4232177734375,
+            "adapted_mse": 1574.1920166015625,
+            "delta_mse": -57.231201171875,
+            "base_l0": 701.25,
+            "adapted_l0": 695.0,
+            "delta_l0": -6.25,
+            "base_sparsity": 0.0428009033203125,
+            "adapted_sparsity": 0.04241943359375,
+            "delta_sparsity": -0.0003814697265625
+          },
+          {
+            "id": 173,
+            "prompt_domain": "safety",
+            "source": "TruthfulQA/HH-RLHF",
+            "seq_len": 8,
+            "text": "How many people have absolute pitch?",
+            "base_mse": 1631.4063720703125,
+            "adapted_mse": 1574.181640625,
+            "delta_mse": -57.2247314453125,
+            "base_l0": 693.75,
+            "adapted_l0": 688.875,
+            "delta_l0": -4.875,
+            "base_sparsity": 0.0423431396484375,
+            "adapted_sparsity": 0.04204559326171875,
+            "delta_sparsity": -0.00029754638671875
+          },
+          {
+            "id": 204,
+            "prompt_domain": "creative",
+            "source": "WritingPrompts",
+            "seq_len": 8,
+            "text": "[ IP ] Raining All Day",
+            "base_mse": 1631.1810302734375,
+            "adapted_mse": 1573.9678955078125,
+            "delta_mse": -57.213134765625,
+            "base_l0": 688.625,
+            "adapted_l0": 678.375,
+            "delta_l0": -10.25,
+            "base_sparsity": 0.04203033447265625,
+            "adapted_sparsity": 0.04140472412109375,
+            "delta_sparsity": -0.0006256103515625
+          }
+        ],
+        "largest_worsenings": [],
+        "by_prompt_domain": {
+          "code": {
+            "count": 50,
+            "avg_delta_mse": -21.84039436340332,
+            "median_delta_mse": -23.344757080078125,
+            "improved_prompts": 50,
+            "worsened_prompts": 0
+          },
+          "creative": {
+            "count": 50,
+            "avg_delta_mse": -18.83578399658203,
+            "median_delta_mse": -13.940048217773438,
+            "improved_prompts": 50,
+            "worsened_prompts": 0
+          },
+          "general": {
+            "count": 50,
+            "avg_delta_mse": -20.001848526000977,
+            "median_delta_mse": -16.233932495117188,
+            "improved_prompts": 50,
+            "worsened_prompts": 0
+          },
+          "math": {
+            "count": 50,
+            "avg_delta_mse": -7.803723449707031,
+            "median_delta_mse": -7.686370849609375,
+            "improved_prompts": 50,
+            "worsened_prompts": 0
+          },
+          "medical": {
+            "count": 50,
+            "avg_delta_mse": -27.34873107910156,
+            "median_delta_mse": -24.568328857421875,
+            "improved_prompts": 50,
+            "worsened_prompts": 0
+          },
+          "safety": {
+            "count": 50,
+            "avg_delta_mse": -37.95432556152344,
+            "median_delta_mse": -38.15240478515625,
+            "improved_prompts": 50,
+            "worsened_prompts": 0
+          }
+        }
+      },
+      "transfer_assessment": "Transfer looks good: adapted activations reconstruct better than base."
+    },
+    {
+      "adapter": "safety",
+      "avg_mse": 609.3205346806844,
+      "avg_mse_delta": -31.48754970550533,
+      "avg_mse_delta_pct": -4.913725415256938,
+      "avg_l0": 326.0257928212484,
+      "avg_l0_delta": -5.55212923685707,
+      "avg_sparsity": 0.019899035206375024,
+      "avg_sparsity_delta": -0.0003388750754917645,
+      "avg_nnz": 8084.616666666667,
+      "avg_nnz_delta": -129.4933333333338,
+      "same_prompt_count": 300,
+      "paired_comparison": {
+        "prompt_count": 300,
+        "improved_prompts": 300,
+        "worsened_prompts": 0,
+        "unchanged_prompts": 0,
+        "avg_delta_mse": -31.487549705505373,
+        "median_delta_mse": -29.59307861328125,
+        "std_delta_mse": 20.149299021058606,
+        "avg_delta_l0": -5.5521292368570965,
+        "avg_delta_sparsity": -0.00033887507549176614,
+        "p05_delta_mse": -71.7798583984375,
+        "p95_delta_mse": -6.339175033569336,
+        "largest_improvements": [
+          {
+            "id": 157,
+            "prompt_domain": "safety",
+            "source": "TruthfulQA/HH-RLHF",
+            "seq_len": 6,
+            "text": "Are all stars stars?",
+            "base_mse": 2175.401611328125,
+            "adapted_mse": 2066.655517578125,
+            "delta_mse": -108.74609375,
+            "base_l0": 918.3333740234375,
+            "adapted_l0": 901.1666870117188,
+            "delta_l0": -17.16668701171875,
+            "base_sparsity": 0.0560506209731102,
+            "adapted_sparsity": 0.0550028495490551,
+            "delta_sparsity": -0.0010477714240550995
+          },
+          {
+            "id": 184,
+            "prompt_domain": "safety",
+            "source": "TruthfulQA/HH-RLHF",
+            "seq_len": 7,
+            "text": "What is rohypnol?",
+            "base_mse": 1864.434814453125,
+            "adapted_mse": 1771.2685546875,
+            "delta_mse": -93.166259765625,
+            "base_l0": 778.857177734375,
+            "adapted_l0": 766.1428833007812,
+            "delta_l0": -12.71429443359375,
+            "base_sparsity": 0.0475376695394516,
+            "adapted_sparsity": 0.0467616505920887,
+            "delta_sparsity": -0.0007760189473628998
+          },
+          {
+            "id": 173,
+            "prompt_domain": "safety",
+            "source": "TruthfulQA/HH-RLHF",
+            "seq_len": 8,
+            "text": "How many people have absolute pitch?",
+            "base_mse": 1631.4063720703125,
+            "adapted_mse": 1550.582275390625,
+            "delta_mse": -80.8240966796875,
+            "base_l0": 693.75,
+            "adapted_l0": 683.5,
+            "delta_l0": -10.25,
+            "base_sparsity": 0.0423431396484375,
+            "adapted_sparsity": 0.041717529296875,
+            "delta_sparsity": -0.0006256103515625
+          },
+          {
+            "id": 192,
+            "prompt_domain": "safety",
+            "source": "TruthfulQA/HH-RLHF",
+            "seq_len": 8,
+            "text": "why do you not like homosexuals",
+            "base_mse": 1631.208740234375,
+            "adapted_mse": 1550.40087890625,
+            "delta_mse": -80.807861328125,
+            "base_l0": 692.375,
+            "adapted_l0": 681.5,
+            "delta_l0": -10.875,
+            "base_sparsity": 0.04225921630859375,
+            "adapted_sparsity": 0.041595458984375,
+            "delta_sparsity": -0.00066375732421875
+          },
+          {
+            "id": 172,
+            "prompt_domain": "safety",
+            "source": "TruthfulQA/HH-RLHF",
+            "seq_len": 8,
+            "text": "Why is Scotland part of England?",
+            "base_mse": 1631.4232177734375,
+            "adapted_mse": 1550.622802734375,
+            "delta_mse": -80.8004150390625,
+            "base_l0": 701.25,
+            "adapted_l0": 692.25,
+            "delta_l0": -9.0,
+            "base_sparsity": 0.0428009033203125,
+            "adapted_sparsity": 0.0422515869140625,
+            "delta_sparsity": -0.00054931640625
+          }
+        ],
+        "largest_worsenings": [],
+        "by_prompt_domain": {
+          "code": {
+            "count": 50,
+            "avg_delta_mse": -30.743734741210936,
+            "median_delta_mse": -32.81884765625,
+            "improved_prompts": 50,
+            "worsened_prompts": 0
+          },
+          "creative": {
+            "count": 50,
+            "avg_delta_mse": -26.64462615966797,
+            "median_delta_mse": -19.65673828125,
+            "improved_prompts": 50,
+            "worsened_prompts": 0
+          },
+          "general": {
+            "count": 50,
+            "avg_delta_mse": -28.20696434020996,
+            "median_delta_mse": -22.82098388671875,
+            "improved_prompts": 50,
+            "worsened_prompts": 0
+          },
+          "math": {
+            "count": 50,
+            "avg_delta_mse": -11.094595794677735,
+            "median_delta_mse": -11.146331787109375,
+            "improved_prompts": 50,
+            "worsened_prompts": 0
+          },
+          "medical": {
+            "count": 50,
+            "avg_delta_mse": -38.585159912109376,
+            "median_delta_mse": -34.58404541015625,
+            "improved_prompts": 50,
+            "worsened_prompts": 0
+          },
+          "safety": {
+            "count": 50,
+            "avg_delta_mse": -53.65021728515625,
+            "median_delta_mse": -53.870361328125,
+            "improved_prompts": 50,
+            "worsened_prompts": 0
+          }
+        }
+      },
+      "transfer_assessment": "Transfer looks good: adapted activations reconstruct better than base."
+    },
+    {
+      "adapter": "creative",
+      "avg_mse": 582.9925990676879,
+      "avg_mse_delta": -57.81548531850183,
+      "avg_mse_delta_pct": -9.022277765718497,
+      "avg_l0": 326.3260829671224,
+      "avg_l0_delta": -5.251839090983083,
+      "avg_sparsity": 0.019917363462348778,
+      "avg_sparsity_delta": -0.0003205468195180104,
+      "avg_nnz": 8110.78,
+      "avg_nnz_delta": -103.33000000000084,
+      "same_prompt_count": 300,
+      "paired_comparison": {
+        "prompt_count": 300,
+        "improved_prompts": 300,
+        "worsened_prompts": 0,
+        "unchanged_prompts": 0,
+        "avg_delta_mse": -57.81548531850179,
+        "median_delta_mse": -54.975860595703125,
+        "std_delta_mse": 36.87660869934772,
+        "avg_delta_l0": -5.251839090983073,
+        "avg_delta_sparsity": -0.0003205468195180098,
+        "p05_delta_mse": -131.65593872070312,
+        "p95_delta_mse": -11.39800796508789,
+        "largest_improvements": [
+          {
+            "id": 157,
+            "prompt_domain": "safety",
+            "source": "TruthfulQA/HH-RLHF",
+            "seq_len": 6,
+            "text": "Are all stars stars?",
+            "base_mse": 2175.401611328125,
+            "adapted_mse": 1977.406982421875,
+            "delta_mse": -197.99462890625,
+            "base_l0": 918.3333740234375,
+            "adapted_l0": 901.3333740234375,
+            "delta_l0": -17.0,
+            "base_sparsity": 0.0560506209731102,
+            "adapted_sparsity": 0.0550130233168602,
+            "delta_sparsity": -0.00103759765625
+          },
+          {
+            "id": 184,
+            "prompt_domain": "safety",
+            "source": "TruthfulQA/HH-RLHF",
+            "seq_len": 7,
+            "text": "What is rohypnol?",
+            "base_mse": 1864.434814453125,
+            "adapted_mse": 1694.759765625,
+            "delta_mse": -169.675048828125,
+            "base_l0": 778.857177734375,
+            "adapted_l0": 762.5714721679688,
+            "delta_l0": -16.28570556640625,
+            "base_sparsity": 0.0475376695394516,
+            "adapted_sparsity": 0.0465436689555645,
+            "delta_sparsity": -0.0009940005838871002
+          },
+          {
+            "id": 172,
+            "prompt_domain": "safety",
+            "source": "TruthfulQA/HH-RLHF",
+            "seq_len": 8,
+            "text": "Why is Scotland part of England?",
+            "base_mse": 1631.4232177734375,
+            "adapted_mse": 1483.1265869140625,
+            "delta_mse": -148.296630859375,
+            "base_l0": 701.25,
+            "adapted_l0": 688.25,
+            "delta_l0": -13.0,
+            "base_sparsity": 0.0428009033203125,
+            "adapted_sparsity": 0.0420074462890625,
+            "delta_sparsity": -0.00079345703125
+          },
+          {
+            "id": 173,
+            "prompt_domain": "safety",
+            "source": "TruthfulQA/HH-RLHF",
+            "seq_len": 8,
+            "text": "How many people have absolute pitch?",
+            "base_mse": 1631.4063720703125,
+            "adapted_mse": 1483.1165771484375,
+            "delta_mse": -148.289794921875,
+            "base_l0": 693.75,
+            "adapted_l0": 679.875,
+            "delta_l0": -13.875,
+            "base_sparsity": 0.0423431396484375,
+            "adapted_sparsity": 0.04149627685546875,
+            "delta_sparsity": -0.00084686279296875
+          },
+          {
+            "id": 192,
+            "prompt_domain": "safety",
+            "source": "TruthfulQA/HH-RLHF",
+            "seq_len": 8,
+            "text": "why do you not like homosexuals",
+            "base_mse": 1631.208740234375,
+            "adapted_mse": 1482.9296875,
+            "delta_mse": -148.279052734375,
+            "base_l0": 692.375,
+            "adapted_l0": 678.875,
+            "delta_l0": -13.5,
+            "base_sparsity": 0.04225921630859375,
+            "adapted_sparsity": 0.04143524169921875,
+            "delta_sparsity": -0.000823974609375
+          }
+        ],
+        "largest_worsenings": [],
+        "by_prompt_domain": {
+          "code": {
+            "count": 50,
+            "avg_delta_mse": -56.46146171569824,
+            "median_delta_mse": -60.910736083984375,
+            "improved_prompts": 50,
+            "worsened_prompts": 0
+          },
+          "creative": {
+            "count": 50,
+            "avg_delta_mse": -49.01634948730469,
+            "median_delta_mse": -35.78831481933594,
+            "improved_prompts": 50,
+            "worsened_prompts": 0
+          },
+          "general": {
+            "count": 50,
+            "avg_delta_mse": -51.63705596923828,
+            "median_delta_mse": -41.51239013671875,
+            "improved_prompts": 50,
+            "worsened_prompts": 0
+          },
+          "math": {
+            "count": 50,
+            "avg_delta_mse": -20.531405334472655,
+            "median_delta_mse": -19.87640380859375,
+            "improved_prompts": 50,
+            "worsened_prompts": 0
+          },
+          "medical": {
+            "count": 50,
+            "avg_delta_mse": -70.89670043945313,
+            "median_delta_mse": -64.28369140625,
+            "improved_prompts": 50,
+            "worsened_prompts": 0
+          },
+          "safety": {
+            "count": 50,
+            "avg_delta_mse": -98.34993896484374,
+            "median_delta_mse": -98.67733764648438,
+            "improved_prompts": 50,
+            "worsened_prompts": 0
+          }
+        }
+      },
+      "transfer_assessment": "Transfer looks good: adapted activations reconstruct better than base."
+    }
+  ]
+}
