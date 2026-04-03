@@ -60,6 +60,19 @@ def save_domain_metadata(path: Path, metadata: dict) -> None:
         json.dump(metadata, f, indent=2, ensure_ascii=False)
 
 
+def load_existing_prompt_metadata(out_dir: Path) -> dict[int, dict]:
+    """Load per-prompt metrics from an existing Day 11 metadata file, if present."""
+    metadata_path = out_dir / "metadata.json"
+    if not metadata_path.exists():
+        return {}
+
+    with open(metadata_path, encoding="utf-8") as f:
+        existing = json.load(f)
+
+    prompts = existing.get("prompts", [])
+    return {int(prompt["id"]): prompt for prompt in prompts}
+
+
 def decode_prompt(
     sae: GemmaScopeSAE,
     activation_path: Path,
@@ -118,6 +131,7 @@ def decode_domain(
     prompts = activation_metadata["prompts"]
     if limit is not None:
         prompts = prompts[:limit]
+    existing_prompt_metadata = load_existing_prompt_metadata(out_dir)
 
     domain_metadata = {
         "source_dir": str(in_dir).replace("\\", "/"),
@@ -148,14 +162,23 @@ def decode_domain(
 
         if output_path.exists() and not overwrite:
             sparse = SparseFeatureActs.load(output_path)
+            existing_prompt = existing_prompt_metadata.get(int(prompt_data["id"]), {})
+            seq_len = int(existing_prompt.get("seq_len", prompt_data["seq_len"]))
+            l0 = existing_prompt.get("l0")
+            if l0 is None:
+                l0 = sparse.nnz / seq_len if seq_len else 0.0
+            sparsity = existing_prompt.get("sparsity")
+            if sparsity is None:
+                denom = seq_len * sae.d_sae
+                sparsity = sparse.nnz / denom if denom else 0.0
             metrics = {
-                "seq_len": int(prompt_data["seq_len"]),
-                "activation_shape": list(prompt_data["shape"]),
-                "feature_shape": [int(prompt_data["seq_len"]), int(sae.d_sae)],
+                "seq_len": seq_len,
+                "activation_shape": existing_prompt.get("activation_shape", list(prompt_data["shape"])),
+                "feature_shape": existing_prompt.get("feature_shape", [seq_len, int(sae.d_sae)]),
                 "nnz": sparse.nnz,
-                "mse": None,
-                "l0": None,
-                "sparsity": None,
+                "mse": existing_prompt.get("mse"),
+                "l0": float(l0),
+                "sparsity": float(sparsity),
             }
         else:
             sparse, metrics = decode_prompt(sae, activation_path, output_path)
