@@ -6,7 +6,9 @@ Domains: code, medical, math, safety, creative
 """
 
 import argparse
+import glob
 import os
+import shutil
 import sys
 import torch
 from datasets import load_dataset
@@ -100,6 +102,30 @@ DOMAIN_LOADERS = {
     "creative": load_creative_dataset,
 }
 
+ESSENTIAL_ADAPTER_FILES = {
+    "adapter_config.json",
+    "adapter_model.safetensors",
+}
+
+
+def prune_adapter_artifacts(output_dir: str):
+    """
+    Keep only the PEFT files needed to reload the adapter.
+
+    The base tokenizer is always loaded from BASE_MODEL, so local tokenizer copies,
+    trainer metadata, and checkpoint directories only add workspace bloat.
+    """
+    for checkpoint_dir in glob.glob(os.path.join(output_dir, "checkpoint-*")):
+        shutil.rmtree(checkpoint_dir, ignore_errors=True)
+
+    for entry in os.listdir(output_dir):
+        entry_path = os.path.join(output_dir, entry)
+        if os.path.isdir(entry_path):
+            shutil.rmtree(entry_path, ignore_errors=True)
+            continue
+        if entry not in ESSENTIAL_ADAPTER_FILES:
+            os.remove(entry_path)
+
 
 def train_adapter(domain: str):
     """Train a single QLoRA adapter for the given domain."""
@@ -183,7 +209,6 @@ def train_adapter(domain: str):
     # Save adapter only (not the full model)
     log(f"Saving adapter to {output_dir}...")
     trainer.save_model(output_dir)
-    tokenizer.save_pretrained(output_dir)
 
     # Cleanup GPU
     del model, trainer
@@ -262,6 +287,7 @@ if __name__ == "__main__":
         for d in domains:
             train_adapter(d)
             verify_adapter(d)
+            prune_adapter_artifacts(os.path.join(OUTPUT_ROOT, d))
 
     log("\n" + "="*60)
     log("  ALL DONE")

@@ -1,0 +1,391 @@
+{
+  "universal_feature_count": 264,
+  "top_k": 25,
+  "top_universal_features": [
+    {
+      "feature_id": 1041,
+      "mean_abs_mass": 64.469994,
+      "mean_abs_freq": 0.047291894,
+      "max_context_shift": 0.00096,
+      "majority_family": "bos_boundary",
+      "majority_family_votes": 4,
+      "classification_pattern": {
+        "code": "suppressed",
+        "medical": "amplified",
+        "math": "amplified",
+        "safety": "amplified",
+        "creative": "suppressed"
+      }
+    },
+    {
+      "feature_id": 6810,
+      "mean_abs_mass": 56.163453,
+      "mean_abs_freq": 0.04612868,
+      "max_context_shift": 0.016032,
+      "majority_family": "code_docstring_example",
+      "majority_family_votes": 2,
+      "classification_pattern": {
+        "code": "amplified",
+        "medical": "suppressed",
+        "math": "suppressed",
+        "safety": "suppressed",
+        "creative": "amplified"
+      }
+    },
+    {
+      "feature_id": 2620,
+      "mean_abs_mass": 35.688159,
+      "mean_abs_freq": 0.002508179,
+      "max_context_shift": 0.001904,
+      "majority_family": "general_legal_reasoning",
+      "majority_family_votes": 2,
+      "classification_pattern": {
+        "code": "suppressed",
+        "medical": "suppressed",
+        "math": "suppressed",
+        "safety": "suppressed",
+        "creative": "suppressed"
+      }
+    },
+    {
+      "feature_id": 7541,
+      "mean_abs_mass": 30.087644,
+      "mean_abs_freq": 0.047291894,
+      "max_context_shift": 0.007752,
+      "majority_family": "code_function_definition",
+      "majority_family_votes": 3,
+      "classification_pattern": {
+        "code": "suppressed",
+        "medical": "suppressed",
+        "math": "amplified",
+        "safety": "amplified",
+        "creative": "suppressed"
+      }
+    },
+    {
+      "feature_id": 2291,
+      "mean_abs_mass": 19.517273,
+      "mean_abs_freq": 0.0282261,
+      "max_context_shift": 0.006336,
+      "majority_family": "general_legal_reasoning",
+      "majority_family_votes": 4,
+      "classification_pattern": {
+        "code": "amplified",
+        "medical": "suppressed",
+        "math": "suppressed",
+        "safety": "suppressed",
+        "creative": "amplified"
+      }
+    },
+    {
+      "feature_id": 11306,
+      "mean_abs_mass": 18.444289,
+      "mean_abs_freq": 0.051835696,
+      "max_context_shift": 0.009082,
+      "majority_family": "medical_clinical",
+      "majority_family_votes": 3,
+      "classification_pattern": {
+        "code": "suppressed",
+        "medical": "suppressed",
+        "math": "amplified",
+        "safety": "suppressed",
+        "creative": "suppressed"
+      }
+    },
+    {
+      "feature_id": 11767,
+      "mean_abs_mass": 14.953183,
+      "mean_abs_freq": 0.01699382,
+      "max_context_shift": 0.000502,
+      "majority_family": "bos_boundary",
+      "majority_family_votes": 2,
+      "classification_pattern": {
+        "code": "suppressed",
+        "medical": "suppressed",
+        "math": "suppressed",
+        "safety": "suppressed",
+        "creative": "suppressed"
+      }
+    },
+    {
+      "feature_id": 11087,
+      "mean_abs_mass": 14.009436,
+      "mean_abs_freq": 0.0,
+      "max_context_shift": 0.0002,
+      "majority_family": "unlabeled",
+      "majority_family_votes": 0,
+      "classification_pattern": {
+        "code": "suppressed",
+        "medical": "suppressed",
+        "math": "suppressed",
+        "safety": "suppressed",
+        "creative": "suppressed"
+      }
+    },
+    {
+      "feature_id": 8806,
+      "mean_abs_mass": 12.800052,
+      "mean_abs_freq": 0.041621229,
+      "max_context_shift": 0.005337,
+      "majority_family": "bos_boundary",
+      "majority_family_votes": 4,
+      "classification_pattern": {
+        "code": "amplified",
+        "medical": "suppressed",
+        "math": "amplified",
+        "safety": "amplified",
+        "creative": "amplified"
+      }
+    },
+    {
+      "feature_id": 14599,
+      "mean_abs_mass": 12.511624,
+      "mean_abs_freq": 0.039712832,
+      "max_context_shift": 0.006763,
+      "majority_family": "code_function_definition",
+      "majority_family_votes": 2,
+      "classification_pattern": {
+        "code": "amplified",
+        "medical": "suppressed",
+        "math": "suppressed",
+        "safety": "suppressed",
+        "creative": "amplified"
+      }
+    },
+    {
+      "feature_id": 10967,
+      "mean_abs_mass": 10.94232,
+      "mean_abs_freq": 0.029916394,
+      "max_context_shift": 0.006023,
+      "majority_family": "code_function_definition",
+      "majority_family_votes": 2,
+      "classification_pattern": {
+        "code": "suppressed",
+        "medical": "amplified",
+        "math": "amplified",
+        "safety": "suppressed",
+        "creative": "suppressed"
+      }
+    },
+    {
+      "feature_id": 5472,
+      "mean_abs_mass": 10.726151,
+      "mean_abs_freq": 0.052835333,
+      "max_context_shift": 0.083648,
+      "majority_family": "generic_instruction",
+      "majority_family_votes": 5,
+      "classification_pattern": {
+        "code": "suppressed",
+        "medical": "suppressed",
+        "math": "suppressed",
+        "safety": "suppressed",
+        "creative": "suppressed"
+      }
+    },
+    {
+      "feature_id": 13295,
+      "mean_abs_mass": 10.37559,
+      "mean_abs_freq": 0.020047256,
+      "max_context_shift": 0.006669,
+      "majority_family": "bos_boundary",
+      "majority_family_votes": 1,
+      "classification_pattern": {
+        "code": "suppressed",
+        "medical": "amplified",
+        "math": "amplified",
+        "safety": "amplified",
+        "creative": "suppressed"
+      }
+    },
+    {
+      "feature_id": 15404,
+      "mean_abs_mass": 9.382825,
+      "mean_abs_freq": 0.023845874,
+      "max_context_shift": 0.003661,
+      "majority_family": "code_function_definition",
+      "majority_family_votes": 3,
+      "classification_pattern": {
+        "code": "suppressed",
+        "medical": "suppressed",
+        "math": "suppressed",
+        "safety": "amplified",
+        "creative": "amplified"
+      }
+    },
+    {
+      "feature_id": 13860,
+      "mean_abs_mass": 9.253305,
+      "mean_abs_freq": 0.023118866,
+      "max_context_shift": 0.015418,
+      "majority_family": "generic_instruction",
+      "majority_family_votes": 1,
+      "classification_pattern": {
+        "code": "suppressed",
+        "medical": "amplified",
+        "math": "suppressed",
+        "safety": "suppressed",
+        "creative": "amplified"
+      }
+    },
+    {
+      "feature_id": 14906,
+      "mean_abs_mass": 9.18925,
+      "mean_abs_freq": 0.029625591,
+      "max_context_shift": 0.013638,
+      "majority_family": "code_function_definition",
+      "majority_family_votes": 3,
+      "classification_pattern": {
+        "code": "suppressed",
+        "medical": "amplified",
+        "math": "amplified",
+        "safety": "amplified",
+        "creative": "suppressed"
+      }
+    },
+    {
+      "feature_id": 1178,
+      "mean_abs_mass": 8.999898,
+      "mean_abs_freq": 0.0,
+      "max_context_shift": 0.001078,
+      "majority_family": "unlabeled",
+      "majority_family_votes": 0,
+      "classification_pattern": {
+        "code": "suppressed",
+        "medical": "suppressed",
+        "math": "suppressed",
+        "safety": "suppressed",
+        "creative": "amplified"
+      }
+    },
+    {
+      "feature_id": 336,
+      "mean_abs_mass": 8.456631,
+      "mean_abs_freq": 0.028189749,
+      "max_context_shift": 0.078511,
+      "majority_family": "bos_boundary",
+      "majority_family_votes": 2,
+      "classification_pattern": {
+        "code": "suppressed",
+        "medical": "suppressed",
+        "math": "suppressed",
+        "safety": "suppressed",
+        "creative": "amplified"
+      }
+    },
+    {
+      "feature_id": 4667,
+      "mean_abs_mass": 8.419177,
+      "mean_abs_freq": 0.0,
+      "max_context_shift": 0.000341,
+      "majority_family": "unlabeled",
+      "majority_family_votes": 0,
+      "classification_pattern": {
+        "code": "suppressed",
+        "medical": "suppressed",
+        "math": "suppressed",
+        "safety": "suppressed",
+        "creative": "suppressed"
+      }
+    },
+    {
+      "feature_id": 15087,
+      "mean_abs_mass": 8.366095,
+      "mean_abs_freq": 0.013704108,
+      "max_context_shift": 0.003056,
+      "majority_family": "math_word_problem",
+      "majority_family_votes": 1,
+      "classification_pattern": {
+        "code": "amplified",
+        "medical": "suppressed",
+        "math": "amplified",
+        "safety": "suppressed",
+        "creative": "suppressed"
+      }
+    },
+    {
+      "feature_id": 5650,
+      "mean_abs_mass": 8.295517,
+      "mean_abs_freq": 0.042366412,
+      "max_context_shift": 0.045957,
+      "majority_family": "code_function_definition",
+      "majority_family_votes": 1,
+      "classification_pattern": {
+        "code": "suppressed",
+        "medical": "amplified",
+        "math": "suppressed",
+        "safety": "amplified",
+        "creative": "amplified"
+      }
+    },
+    {
+      "feature_id": 6565,
+      "mean_abs_mass": 8.196383,
+      "mean_abs_freq": 0.035514358,
+      "max_context_shift": 0.057371,
+      "majority_family": "generic_instruction",
+      "majority_family_votes": 2,
+      "classification_pattern": {
+        "code": "amplified",
+        "medical": "amplified",
+        "math": "amplified",
+        "safety": "amplified",
+        "creative": "amplified"
+      }
+    },
+    {
+      "feature_id": 13700,
+      "mean_abs_mass": 7.800754,
+      "mean_abs_freq": 0.036641221,
+      "max_context_shift": 0.00358,
+      "majority_family": "bos_boundary",
+      "majority_family_votes": 2,
+      "classification_pattern": {
+        "code": "amplified",
+        "medical": "amplified",
+        "math": "amplified",
+        "safety": "amplified",
+        "creative": "suppressed"
+      }
+    },
+    {
+      "feature_id": 9059,
+      "mean_abs_mass": 7.595728,
+      "mean_abs_freq": 0.036768448,
+      "max_context_shift": 0.019592,
+      "majority_family": "code_function_definition",
+      "majority_family_votes": 2,
+      "classification_pattern": {
+        "code": "amplified",
+        "medical": "suppressed",
+        "math": "suppressed",
+        "safety": "amplified",
+        "creative": "amplified"
+      }
+    },
+    {
+      "feature_id": 7507,
+      "mean_abs_mass": 7.563257,
+      "mean_abs_freq": 0.00823337,
+      "max_context_shift": 0.000315,
+      "majority_family": "bos_boundary",
+      "majority_family_votes": 1,
+      "classification_pattern": {
+        "code": "suppressed",
+        "medical": "suppressed",
+        "math": "amplified",
+        "safety": "amplified",
+        "creative": "amplified"
+      }
+    }
+  ],
+  "top_universal_family_counts": {
+    "bos_boundary": 7,
+    "code_docstring_example": 1,
+    "code_function_definition": 7,
+    "general_legal_reasoning": 2,
+    "generic_instruction": 3,
+    "math_word_problem": 1,
+    "medical_clinical": 1,
+    "unlabeled": 3
+  }
+}

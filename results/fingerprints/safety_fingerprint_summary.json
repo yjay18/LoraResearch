@@ -1,0 +1,138 @@
+{
+  "adapter": "safety",
+  "feature_count": 16384,
+  "changed_feature_count": 2488,
+  "top_k_labeled": 250,
+  "structural_topk_count": 87,
+  "non_structural_amplified_count": 48,
+  "non_structural_amplified_semantic_match": 0.041667,
+  "signed_mass_l1": 2787.578125,
+  "signed_mass_l2": 153.66394,
+  "signed_freq_l1": 8.651036263,
+  "top_positive_features": [
+    {
+      "feature_id": 1041,
+      "delta_mean_prompt_activation": 97.95996,
+      "classification": "amplified",
+      "change_rank_score": 118.474621
+    },
+    {
+      "feature_id": 13295,
+      "delta_mean_prompt_activation": 20.63488,
+      "classification": "amplified",
+      "change_rank_score": 34.57991
+    },
+    {
+      "feature_id": 7541,
+      "delta_mean_prompt_activation": 12.493805,
+      "classification": "amplified",
+      "change_rank_score": 13.757249
+    },
+    {
+      "feature_id": 8215,
+      "delta_mean_prompt_activation": 11.315918,
+      "classification": "amplified",
+      "change_rank_score": 34.46636
+    },
+    {
+      "feature_id": 11264,
+      "delta_mean_prompt_activation": 8.971868,
+      "classification": "amplified",
+      "change_rank_score": 34.108511
+    },
+    {
+      "feature_id": 8806,
+      "delta_mean_prompt_activation": 8.942635,
+      "classification": "amplified",
+      "change_rank_score": 18.445864
+    },
+    {
+      "feature_id": 14252,
+      "delta_mean_prompt_activation": 6.955852,
+      "classification": "amplified",
+      "change_rank_score": 18.86571
+    },
+    {
+      "feature_id": 14632,
+      "delta_mean_prompt_activation": 6.288248,
+      "classification": "amplified",
+      "change_rank_score": 16.877554
+    },
+    {
+      "feature_id": 1033,
+      "delta_mean_prompt_activation": 6.222292,
+      "classification": "amplified",
+      "change_rank_score": 14.857216
+    },
+    {
+      "feature_id": 7708,
+      "delta_mean_prompt_activation": 6.051621,
+      "classification": "amplified",
+      "change_rank_score": 25.509355
+    }
+  ],
+  "top_negative_features": [
+    {
+      "feature_id": 6810,
+      "delta_mean_prompt_activation": -78.09122,
+      "classification": "suppressed",
+      "change_rank_score": 94.294509
+    },
+    {
+      "feature_id": 2291,
+      "delta_mean_prompt_activation": -28.27353,
+      "classification": "suppressed",
+      "change_rank_score": 44.669216
+    },
+    {
+      "feature_id": 11087,
+      "delta_mean_prompt_activation": -19.410767,
+      "classification": "suppressed",
+      "change_rank_score": 16.885425
+    },
+    {
+      "feature_id": 2620,
+      "delta_mean_prompt_activation": -18.839233,
+      "classification": "suppressed",
+      "change_rank_score": 16.462321
+    },
+    {
+      "feature_id": 11767,
+      "delta_mean_prompt_activation": -14.644562,
+      "classification": "suppressed",
+      "change_rank_score": 22.554118
+    },
+    {
+      "feature_id": 15087,
+      "delta_mean_prompt_activation": -14.223846,
+      "classification": "suppressed",
+      "change_rank_score": 15.521471
+    },
+    {
+      "feature_id": 11412,
+      "delta_mean_prompt_activation": -11.087925,
+      "classification": "suppressed",
+      "change_rank_score": 30.913033
+    },
+    {
+      "feature_id": 5472,
+      "delta_mean_prompt_activation": -10.844168,
+      "classification": "suppressed",
+      "change_rank_score": 35.725242
+    },
+    {
+      "feature_id": 2594,
+      "delta_mean_prompt_activation": -9.551693,
+      "classification": "killed",
+      "change_rank_score": 29.010639
+    },
+    {
+      "feature_id": 11306,
+      "delta_mean_prompt_activation": -9.392769,
+      "classification": "suppressed",
+      "change_rank_score": 16.28188
+    }
+  ],
+  "vector_path": "results\\fingerprints\\safety_fingerprint_vectors.npz",
+  "labels_path": "results\\fingerprints\\safety_top250_labels.json"
+}

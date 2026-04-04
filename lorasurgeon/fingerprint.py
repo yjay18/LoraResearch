@@ -48,6 +48,21 @@ NON_CODE_FAMILIES = {
     "general_legal_reasoning",
     "generic_instruction",
 }
+STRUCTURAL_FAMILY = "bos_boundary"
+
+FINGERPRINT_VECTOR_COLUMNS = {
+    "signed_mass": "delta_mean_prompt_activation",
+    "signed_freq": "delta_token_freq",
+}
+
+CLASS_DIRECTION = {
+    "amplified": 1.0,
+    "newly_activated": 1.0,
+    "suppressed": -1.0,
+    "killed": -1.0,
+    "context_shifted": 0.0,
+    "unchanged": 0.0,
+}
 
 CODE_HINTS = [
     "def ",
@@ -657,3 +672,76 @@ def labels_to_frame(labels: list[dict]) -> pd.DataFrame:
 def summarize_label_families(labels: list[dict]) -> dict[str, int]:
     counts = Counter(label["label_family"] for label in labels)
     return {label: counts[label] for label in sorted(counts)}
+
+
+def load_classification_artifacts(
+    adapter: str,
+    classification_root: str | Path = "results/classification",
+) -> tuple[pd.DataFrame, dict]:
+    classification_root = Path(classification_root)
+    classified = pd.read_csv(classification_root / f"{adapter}_classified_features.csv")
+    summary = load_json(classification_root / f"{adapter}_classification_summary.json")
+    return classified, summary
+
+
+def prepare_ranked_classified_frame(
+    adapter: str,
+    classification_root: str | Path = "results/classification",
+) -> tuple[pd.DataFrame, dict]:
+    classified, summary = load_classification_artifacts(adapter, classification_root)
+    ranked = compute_change_rank(classified, summary["thresholds"])
+    ranked = ranked.sort_values("feature_id").reset_index(drop=True)
+    return ranked, summary
+
+
+def label_top_changed_for_adapter(
+    adapter: str,
+    top_k: int = 250,
+    prompts_path: str | Path = "data/prompts_300.json",
+    feature_root: str | Path = "data/sae_features",
+    tokenizer_path: str | Path | None = None,
+    classification_root: str | Path = "results/classification",
+) -> dict:
+    ranked, summary = prepare_ranked_classified_frame(adapter, classification_root)
+    selected = select_top_changed_features(ranked, summary["thresholds"], top_k=top_k)
+    labels, resolved_tokenizer_path = label_selected_features(
+        adapter=adapter,
+        selected=selected,
+        prompts_path=prompts_path,
+        feature_root=feature_root,
+        tokenizer_path=tokenizer_path,
+    )
+    return {
+        "adapter": adapter,
+        "top_k": top_k,
+        "tokenizer_path": str(resolved_tokenizer_path),
+        "thresholds": summary["thresholds"],
+        "label_count": len(labels),
+        "labels": labels,
+    }
+
+
+def build_dense_fingerprint_vectors(
+    ranked: pd.DataFrame,
+    zero_unchanged: bool = True,
+) -> tuple[np.ndarray, dict[str, np.ndarray]]:
+    ordered = ranked.sort_values("feature_id").reset_index(drop=True)
+    changed_mask = (ordered["classification"] != "unchanged").to_numpy(dtype=bool, copy=False)
+    feature_ids = ordered["feature_id"].to_numpy(dtype=np.int32, copy=False)
+
+    vectors = {}
+    for name, column in FINGERPRINT_VECTOR_COLUMNS.items():
+        values = ordered[column].to_numpy(dtype=np.float32, copy=True)
+        if zero_unchanged:
+            values[~changed_mask] = 0.0
+        vectors[name] = values
+
+    direction = ordered["classification"].map(CLASS_DIRECTION).fillna(0.0).to_numpy(dtype=np.float32, copy=False)
+    fallback_sign = np.sign(ordered["delta_mean_prompt_activation"].to_numpy(dtype=np.float32, copy=False))
+    signed_rank = ordered["change_rank_score"].to_numpy(dtype=np.float32, copy=True)
+    signed_rank *= np.where(direction != 0.0, direction, fallback_sign)
+    if zero_unchanged:
+        signed_rank[~changed_mask] = 0.0
+    vectors["signed_rank"] = signed_rank
+
+    return feature_ids, vectors

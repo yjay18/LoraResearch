@@ -1,0 +1,138 @@
+{
+  "adapter": "math",
+  "feature_count": 16384,
+  "changed_feature_count": 2494,
+  "top_k_labeled": 250,
+  "structural_topk_count": 77,
+  "non_structural_amplified_count": 65,
+  "non_structural_amplified_semantic_match": 0.430769,
+  "signed_mass_l1": 2320.447266,
+  "signed_mass_l2": 110.190689,
+  "signed_freq_l1": 8.077517509,
+  "top_positive_features": [
+    {
+      "feature_id": 1041,
+      "delta_mean_prompt_activation": 45.831055,
+      "classification": "amplified",
+      "change_rank_score": 66.852345
+    },
+    {
+      "feature_id": 14906,
+      "delta_mean_prompt_activation": 15.789127,
+      "classification": "amplified",
+      "change_rank_score": 38.468909
+    },
+    {
+      "feature_id": 11313,
+      "delta_mean_prompt_activation": 13.26709,
+      "classification": "amplified",
+      "change_rank_score": 37.195262
+    },
+    {
+      "feature_id": 7541,
+      "delta_mean_prompt_activation": 11.990662,
+      "classification": "amplified",
+      "change_rank_score": 16.81579
+    },
+    {
+      "feature_id": 8806,
+      "delta_mean_prompt_activation": 11.073196,
+      "classification": "amplified",
+      "change_rank_score": 25.074259
+    },
+    {
+      "feature_id": 15087,
+      "delta_mean_prompt_activation": 9.829597,
+      "classification": "amplified",
+      "change_rank_score": 24.123123
+    },
+    {
+      "feature_id": 7376,
+      "delta_mean_prompt_activation": 8.970966,
+      "classification": "amplified",
+      "change_rank_score": 20.016271
+    },
+    {
+      "feature_id": 7795,
+      "delta_mean_prompt_activation": 8.36879,
+      "classification": "amplified",
+      "change_rank_score": 22.325189
+    },
+    {
+      "feature_id": 13700,
+      "delta_mean_prompt_activation": 8.07254,
+      "classification": "amplified",
+      "change_rank_score": 24.581365
+    },
+    {
+      "feature_id": 7248,
+      "delta_mean_prompt_activation": 7.172031,
+      "classification": "amplified",
+      "change_rank_score": 21.215303
+    }
+  ],
+  "top_negative_features": [
+    {
+      "feature_id": 6810,
+      "delta_mean_prompt_activation": -66.77533,
+      "classification": "suppressed",
+      "change_rank_score": 91.244557
+    },
+    {
+      "feature_id": 2291,
+      "delta_mean_prompt_activation": -14.143738,
+      "classification": "suppressed",
+      "change_rank_score": 23.071252
+    },
+    {
+      "feature_id": 5650,
+      "delta_mean_prompt_activation": -13.606648,
+      "classification": "suppressed",
+      "change_rank_score": 46.169374
+    },
+    {
+      "feature_id": 14599,
+      "delta_mean_prompt_activation": -12.207115,
+      "classification": "suppressed",
+      "change_rank_score": 28.514003
+    },
+    {
+      "feature_id": 13860,
+      "delta_mean_prompt_activation": -11.770126,
+      "classification": "suppressed",
+      "change_rank_score": 25.184593
+    },
+    {
+      "feature_id": 336,
+      "delta_mean_prompt_activation": -10.855682,
+      "classification": "suppressed",
+      "change_rank_score": 26.017757
+    },
+    {
+      "feature_id": 15404,
+      "delta_mean_prompt_activation": -10.405899,
+      "classification": "suppressed",
+      "change_rank_score": 22.424521
+    },
+    {
+      "feature_id": 11767,
+      "delta_mean_prompt_activation": -8.804062,
+      "classification": "suppressed",
+      "change_rank_score": 14.050513
+    },
+    {
+      "feature_id": 9815,
+      "delta_mean_prompt_activation": -7.899155,
+      "classification": "suppressed",
+      "change_rank_score": 21.822554
+    },
+    {
+      "feature_id": 9570,
+      "delta_mean_prompt_activation": -6.742995,
+      "classification": "suppressed",
+      "change_rank_score": 19.881022
+    }
+  ],
+  "vector_path": "results\\fingerprints\\math_fingerprint_vectors.npz",
+  "labels_path": "results\\fingerprints\\math_top250_labels.json"
+}

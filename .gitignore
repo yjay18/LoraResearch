@@ -26,6 +26,7 @@ desktop.ini
 
 # Jupyter
 .ipynb_checkpoints/
+.jupyter_runtime/
 
 # Large files - activations, model caches
 *.npy
@@ -42,6 +43,10 @@ results/*.npy
 results/*.npz
 results/differential/*.csv
 results/classification/*.csv
+results/adapters/*/checkpoint-*/
+results/adapters/*/tokenizer.json
+results/adapters/*/tokenizer_config.json
+results/adapters/*/training_args.bin
 
 # Secrets
 .env

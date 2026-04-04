@@ -1,0 +1,409 @@
+{
+  "adapters": [
+    {
+      "adapter": "code",
+      "tokenizer_path": "C:\\Users\\Yuuv\\.cache\\huggingface\\hub\\models--google--gemma-2-2b\\snapshots\\c5ebcd40d208330abc697524c919956e692655cf\\tokenizer.json",
+      "selected_feature_count": 299,
+      "prefix_stats": [
+        {
+          "top_n": 25,
+          "bos_count": 13,
+          "structural_fraction": 0.52,
+          "amplified_non_structural_count": 7,
+          "semantic_match": 0.857143
+        },
+        {
+          "top_n": 50,
+          "bos_count": 35,
+          "structural_fraction": 0.7,
+          "amplified_non_structural_count": 9,
+          "semantic_match": 0.666667
+        },
+        {
+          "top_n": 100,
+          "bos_count": 78,
+          "structural_fraction": 0.78,
+          "amplified_non_structural_count": 11,
+          "semantic_match": 0.545455
+        },
+        {
+          "top_n": 150,
+          "bos_count": 116,
+          "structural_fraction": 0.773333,
+          "amplified_non_structural_count": 15,
+          "semantic_match": 0.533333
+        },
+        {
+          "top_n": 200,
+          "bos_count": 130,
+          "structural_fraction": 0.65,
+          "amplified_non_structural_count": 21,
+          "semantic_match": 0.428571
+        },
+        {
+          "top_n": 250,
+          "bos_count": 136,
+          "structural_fraction": 0.544,
+          "amplified_non_structural_count": 50,
+          "semantic_match": 0.3
+        }
+      ],
+      "method_stats": {
+        "composite": {
+          "top_n": 100,
+          "bos_count": 78,
+          "structural_fraction": 0.78,
+          "amplified_non_structural_count": 11,
+          "semantic_match": 0.545455,
+          "jaccard_vs_composite_top100": 1.0
+        },
+        "abs_mass": {
+          "top_n": 100,
+          "bos_count": 55,
+          "structural_fraction": 0.55,
+          "amplified_non_structural_count": 16,
+          "semantic_match": 0.5,
+          "jaccard_vs_composite_top100": 0.190476
+        },
+        "abs_freq": {
+          "top_n": 100,
+          "bos_count": 46,
+          "structural_fraction": 0.46,
+          "amplified_non_structural_count": 21,
+          "semantic_match": 0.428571,
+          "jaccard_vs_composite_top100": 0.298701
+        }
+      },
+      "robustness_points": [
+        "Structural dominance persists across top-N cutoffs: top-100 structural fraction is 78.0% and top-250 structural fraction is 54.4%.",
+        "The semantic match among non-structural amplified features is 54.5% at top-100 and 30.0% at top-250.",
+        "Ranking sensitivity is moderate rather than catastrophic: the top-100 Jaccard overlap with the composite ranking is 19.0% for abs-mass and 29.9% for abs-frequency."
+      ]
+    },
+    {
+      "adapter": "medical",
+      "tokenizer_path": "C:\\Users\\Yuuv\\.cache\\huggingface\\hub\\models--google--gemma-2-2b\\snapshots\\c5ebcd40d208330abc697524c919956e692655cf\\tokenizer.json",
+      "selected_feature_count": 260,
+      "prefix_stats": [
+        {
+          "top_n": 25,
+          "bos_count": 5,
+          "structural_fraction": 0.2,
+          "amplified_non_structural_count": 13,
+          "semantic_match": 0.153846
+        },
+        {
+          "top_n": 50,
+          "bos_count": 27,
+          "structural_fraction": 0.54,
+          "amplified_non_structural_count": 15,
+          "semantic_match": 0.2
+        },
+        {
+          "top_n": 100,
+          "bos_count": 59,
+          "structural_fraction": 0.59,
+          "amplified_non_structural_count": 21,
+          "semantic_match": 0.142857
+        },
+        {
+          "top_n": 150,
+          "bos_count": 65,
+          "structural_fraction": 0.433333,
+          "amplified_non_structural_count": 38,
+          "semantic_match": 0.105263
+        },
+        {
+          "top_n": 200,
+          "bos_count": 68,
+          "structural_fraction": 0.34,
+          "amplified_non_structural_count": 68,
+          "semantic_match": 0.102941
+        },
+        {
+          "top_n": 250,
+          "bos_count": 72,
+          "structural_fraction": 0.288,
+          "amplified_non_structural_count": 92,
+          "semantic_match": 0.108696
+        }
+      ],
+      "method_stats": {
+        "composite": {
+          "top_n": 100,
+          "bos_count": 59,
+          "structural_fraction": 0.59,
+          "amplified_non_structural_count": 21,
+          "semantic_match": 0.142857,
+          "jaccard_vs_composite_top100": 1.0
+        },
+        "abs_mass": {
+          "top_n": 100,
+          "bos_count": 31,
+          "structural_fraction": 0.31,
+          "amplified_non_structural_count": 35,
+          "semantic_match": 0.171429,
+          "jaccard_vs_composite_top100": 0.398601
+        },
+        "abs_freq": {
+          "top_n": 100,
+          "bos_count": 52,
+          "structural_fraction": 0.52,
+          "amplified_non_structural_count": 23,
+          "semantic_match": 0.130435,
+          "jaccard_vs_composite_top100": 0.785714
+        }
+      },
+      "robustness_points": [
+        "Structural dominance persists across top-N cutoffs: top-100 structural fraction is 59.0% and top-250 structural fraction is 28.8%.",
+        "The semantic match among non-structural amplified features is 14.3% at top-100 and 10.9% at top-250.",
+        "Ranking sensitivity is moderate rather than catastrophic: the top-100 Jaccard overlap with the composite ranking is 39.9% for abs-mass and 78.6% for abs-frequency."
+      ]
+    },
+    {
+      "adapter": "math",
+      "tokenizer_path": "C:\\Users\\Yuuv\\.cache\\huggingface\\hub\\models--google--gemma-2-2b\\snapshots\\c5ebcd40d208330abc697524c919956e692655cf\\tokenizer.json",
+      "selected_feature_count": 252,
+      "prefix_stats": [
+        {
+          "top_n": 25,
+          "bos_count": 18,
+          "structural_fraction": 0.72,
+          "amplified_non_structural_count": 2,
+          "semantic_match": 0.0
+        },
+        {
+          "top_n": 50,
+          "bos_count": 34,
+          "structural_fraction": 0.68,
+          "amplified_non_structural_count": 6,
+          "semantic_match": 0.333333
+        },
+        {
+          "top_n": 100,
+          "bos_count": 58,
+          "structural_fraction": 0.58,
+          "amplified_non_structural_count": 12,
+          "semantic_match": 0.416667
+        },
+        {
+          "top_n": 150,
+          "bos_count": 68,
+          "structural_fraction": 0.453333,
+          "amplified_non_structural_count": 30,
+          "semantic_match": 0.4
+        },
+        {
+          "top_n": 200,
+          "bos_count": 74,
+          "structural_fraction": 0.37,
+          "amplified_non_structural_count": 46,
+          "semantic_match": 0.369565
+        },
+        {
+          "top_n": 250,
+          "bos_count": 77,
+          "structural_fraction": 0.308,
+          "amplified_non_structural_count": 65,
+          "semantic_match": 0.430769
+        }
+      ],
+      "method_stats": {
+        "composite": {
+          "top_n": 100,
+          "bos_count": 58,
+          "structural_fraction": 0.58,
+          "amplified_non_structural_count": 12,
+          "semantic_match": 0.416667,
+          "jaccard_vs_composite_top100": 1.0
+        },
+        "abs_mass": {
+          "top_n": 100,
+          "bos_count": 46,
+          "structural_fraction": 0.46,
+          "amplified_non_structural_count": 19,
+          "semantic_match": 0.473684,
+          "jaccard_vs_composite_top100": 0.538462
+        },
+        "abs_freq": {
+          "top_n": 100,
+          "bos_count": 59,
+          "structural_fraction": 0.59,
+          "amplified_non_structural_count": 13,
+          "semantic_match": 0.384615,
+          "jaccard_vs_composite_top100": 0.904762
+        }
+      },
+      "robustness_points": [
+        "Structural dominance persists across top-N cutoffs: top-100 structural fraction is 58.0% and top-250 structural fraction is 30.8%.",
+        "The semantic match among non-structural amplified features is 41.7% at top-100 and 43.1% at top-250.",
+        "Ranking sensitivity is moderate rather than catastrophic: the top-100 Jaccard overlap with the composite ranking is 53.8% for abs-mass and 90.5% for abs-frequency."
+      ]
+    },
+    {
+      "adapter": "safety",
+      "tokenizer_path": "C:\\Users\\Yuuv\\.cache\\huggingface\\hub\\models--google--gemma-2-2b\\snapshots\\c5ebcd40d208330abc697524c919956e692655cf\\tokenizer.json",
+      "selected_feature_count": 258,
+      "prefix_stats": [
+        {
+          "top_n": 25,
+          "bos_count": 17,
+          "structural_fraction": 0.68,
+          "amplified_non_structural_count": 3,
+          "semantic_match": 0.0
+        },
+        {
+          "top_n": 50,
+          "bos_count": 39,
+          "structural_fraction": 0.78,
+          "amplified_non_structural_count": 4,
+          "semantic_match": 0.0
+        },
+        {
+          "top_n": 100,
+          "bos_count": 71,
+          "structural_fraction": 0.71,
+          "amplified_non_structural_count": 5,
+          "semantic_match": 0.0
+        },
+        {
+          "top_n": 150,
+          "bos_count": 79,
+          "structural_fraction": 0.526667,
+          "amplified_non_structural_count": 17,
+          "semantic_match": 0.0
+        },
+        {
+          "top_n": 200,
+          "bos_count": 84,
+          "structural_fraction": 0.42,
+          "amplified_non_structural_count": 32,
+          "semantic_match": 0.03125
+        },
+        {
+          "top_n": 250,
+          "bos_count": 87,
+          "structural_fraction": 0.348,
+          "amplified_non_structural_count": 48,
+          "semantic_match": 0.041667
+        }
+      ],
+      "method_stats": {
+        "composite": {
+          "top_n": 100,
+          "bos_count": 71,
+          "structural_fraction": 0.71,
+          "amplified_non_structural_count": 5,
+          "semantic_match": 0.0,
+          "jaccard_vs_composite_top100": 1.0
+        },
+        "abs_mass": {
+          "top_n": 100,
+          "bos_count": 45,
+          "structural_fraction": 0.45,
+          "amplified_non_structural_count": 14,
+          "semantic_match": 0.0,
+          "jaccard_vs_composite_top100": 0.449275
+        },
+        "abs_freq": {
+          "top_n": 100,
+          "bos_count": 63,
+          "structural_fraction": 0.63,
+          "amplified_non_structural_count": 8,
+          "semantic_match": 0.0,
+          "jaccard_vs_composite_top100": 0.818182
+        }
+      },
+      "robustness_points": [
+        "Structural dominance persists across top-N cutoffs: top-100 structural fraction is 71.0% and top-250 structural fraction is 34.8%.",
+        "The semantic match among non-structural amplified features is 0.0% at top-100 and 4.2% at top-250.",
+        "Ranking sensitivity is moderate rather than catastrophic: the top-100 Jaccard overlap with the composite ranking is 44.9% for abs-mass and 81.8% for abs-frequency."
+      ]
+    },
+    {
+      "adapter": "creative",
+      "tokenizer_path": "C:\\Users\\Yuuv\\.cache\\huggingface\\hub\\models--google--gemma-2-2b\\snapshots\\c5ebcd40d208330abc697524c919956e692655cf\\tokenizer.json",
+      "selected_feature_count": 292,
+      "prefix_stats": [
+        {
+          "top_n": 25,
+          "bos_count": 10,
+          "structural_fraction": 0.4,
+          "amplified_non_structural_count": 10,
+          "semantic_match": 0.0
+        },
+        {
+          "top_n": 50,
+          "bos_count": 31,
+          "structural_fraction": 0.62,
+          "amplified_non_structural_count": 12,
+          "semantic_match": 0.0
+        },
+        {
+          "top_n": 100,
+          "bos_count": 73,
+          "structural_fraction": 0.73,
+          "amplified_non_structural_count": 13,
+          "semantic_match": 0.0
+        },
+        {
+          "top_n": 150,
+          "bos_count": 109,
+          "structural_fraction": 0.726667,
+          "amplified_non_structural_count": 20,
+          "semantic_match": 0.0
+        },
+        {
+          "top_n": 200,
+          "bos_count": 128,
+          "structural_fraction": 0.64,
+          "amplified_non_structural_count": 24,
+          "semantic_match": 0.0
+        },
+        {
+          "top_n": 250,
+          "bos_count": 133,
+          "structural_fraction": 0.532,
+          "amplified_non_structural_count": 47,
+          "semantic_match": 0.042553
+        }
+      ],
+      "method_stats": {
+        "composite": {
+          "top_n": 100,
+          "bos_count": 73,
+          "structural_fraction": 0.73,
+          "amplified_non_structural_count": 13,
+          "semantic_match": 0.0,
+          "jaccard_vs_composite_top100": 1.0
+        },
+        "abs_mass": {
+          "top_n": 100,
+          "bos_count": 51,
+          "structural_fraction": 0.51,
+          "amplified_non_structural_count": 20,
+          "semantic_match": 0.0,
+          "jaccard_vs_composite_top100": 0.242236
+        },
+        "abs_freq": {
+          "top_n": 100,
+          "bos_count": 44,
+          "structural_fraction": 0.44,
+          "amplified_non_structural_count": 25,
+          "semantic_match": 0.0,
+          "jaccard_vs_composite_top100": 0.282051
+        }
+      },
+      "robustness_points": [
+        "Structural dominance persists across top-N cutoffs: top-100 structural fraction is 73.0% and top-250 structural fraction is 53.2%.",
+        "The semantic match among non-structural amplified features is 0.0% at top-100 and 4.3% at top-250.",
+        "Ranking sensitivity is moderate rather than catastrophic: the top-100 Jaccard overlap with the composite ranking is 24.2% for abs-mass and 28.2% for abs-frequency."
+      ]
+    }
+  ],
+  "overall_conclusions": [
+    "The revised interpretation is robust: structural BOS / boundary features remain a majority of the top changed set at top-250 for 2/5 adapters.",
+    "The strongest semantic adapter under this robustness pass is code (54.5% top-100 semantic match among non-structural amplified features).",
+    "Changing the ranking metric alters which individual features rise into the top-100, but it does not reverse the high-level conclusion that LoRA effects are largely structural with smaller semantic overlays."
+  ]
+}

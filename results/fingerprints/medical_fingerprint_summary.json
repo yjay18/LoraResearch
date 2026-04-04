@@ -1,0 +1,138 @@
+{
+  "adapter": "medical",
+  "feature_count": 16384,
+  "changed_feature_count": 2480,
+  "top_k_labeled": 250,
+  "structural_topk_count": 72,
+  "non_structural_amplified_count": 92,
+  "non_structural_amplified_semantic_match": 0.108696,
+  "signed_mass_l1": 2749.071045,
+  "signed_mass_l2": 113.065102,
+  "signed_freq_l1": 9.663848877,
+  "top_positive_features": [
+    {
+      "feature_id": 10967,
+      "delta_mean_prompt_activation": 31.536858,
+      "classification": "amplified",
+      "change_rank_score": 59.656856
+    },
+    {
+      "feature_id": 7493,
+      "delta_mean_prompt_activation": 18.666649,
+      "classification": "amplified",
+      "change_rank_score": 33.591099
+    },
+    {
+      "feature_id": 6565,
+      "delta_mean_prompt_activation": 18.501406,
+      "classification": "amplified",
+      "change_rank_score": 47.696013
+    },
+    {
+      "feature_id": 11412,
+      "delta_mean_prompt_activation": 17.683193,
+      "classification": "amplified",
+      "change_rank_score": 40.204269
+    },
+    {
+      "feature_id": 15454,
+      "delta_mean_prompt_activation": 17.225235,
+      "classification": "amplified",
+      "change_rank_score": 37.96138
+    },
+    {
+      "feature_id": 5650,
+      "delta_mean_prompt_activation": 17.216366,
+      "classification": "amplified",
+      "change_rank_score": 43.484718
+    },
+    {
+      "feature_id": 12342,
+      "delta_mean_prompt_activation": 15.227005,
+      "classification": "amplified",
+      "change_rank_score": 26.677058
+    },
+    {
+      "feature_id": 13431,
+      "delta_mean_prompt_activation": 13.990116,
+      "classification": "amplified",
+      "change_rank_score": 40.931696
+    },
+    {
+      "feature_id": 2009,
+      "delta_mean_prompt_activation": 13.038803,
+      "classification": "amplified",
+      "change_rank_score": 28.934018
+    },
+    {
+      "feature_id": 13295,
+      "delta_mean_prompt_activation": 12.004684,
+      "classification": "amplified",
+      "change_rank_score": 17.460074
+    }
+  ],
+  "top_negative_features": [
+    {
+      "feature_id": 2620,
+      "delta_mean_prompt_activation": -43.9552,
+      "classification": "suppressed",
+      "change_rank_score": 40.058731
+    },
+    {
+      "feature_id": 11306,
+      "delta_mean_prompt_activation": -23.600739,
+      "classification": "suppressed",
+      "change_rank_score": 45.536837
+    },
+    {
+      "feature_id": 7541,
+      "delta_mean_prompt_activation": -21.507584,
+      "classification": "suppressed",
+      "change_rank_score": 32.031912
+    },
+    {
+      "feature_id": 7507,
+      "delta_mean_prompt_activation": -16.437012,
+      "classification": "suppressed",
+      "change_rank_score": 22.133161
+    },
+    {
+      "feature_id": 15404,
+      "delta_mean_prompt_activation": -14.059555,
+      "classification": "suppressed",
+      "change_rank_score": 22.855844
+    },
+    {
+      "feature_id": 2291,
+      "delta_mean_prompt_activation": -13.389526,
+      "classification": "suppressed",
+      "change_rank_score": 18.789322
+    },
+    {
+      "feature_id": 8806,
+      "delta_mean_prompt_activation": -13.223305,
+      "classification": "suppressed",
+      "change_rank_score": 28.266027
+    },
+    {
+      "feature_id": 5472,
+      "delta_mean_prompt_activation": -13.1117,
+      "classification": "suppressed",
+      "change_rank_score": 39.736379
+    },
+    {
+      "feature_id": 15087,
+      "delta_mean_prompt_activation": -12.474525,
+      "classification": "suppressed",
+      "change_rank_score": 15.472997
+    },
+    {
+      "feature_id": 7376,
+      "delta_mean_prompt_activation": -9.768333,
+      "classification": "suppressed",
+      "change_rank_score": 17.367776
+    }
+  ],
+  "vector_path": "results\\fingerprints\\medical_fingerprint_vectors.npz",
+  "labels_path": "results\\fingerprints\\medical_top250_labels.json"
+}

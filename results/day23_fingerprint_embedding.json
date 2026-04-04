@@ -1,0 +1,98 @@
+{
+  "method": "pca",
+  "why_not_umap_or_tsne": "With only six points (`base` plus five adapters), PCA is the more stable and interpretable choice. UMAP/t-SNE would add stochastic geometry without adding real information.",
+  "full_projection": [
+    {
+      "label": "base",
+      "x": 22.140513,
+      "y": -9.176762
+    },
+    {
+      "label": "code",
+      "x": -112.505169,
+      "y": 88.50253
+    },
+    {
+      "label": "medical",
+      "x": 18.798047,
+      "y": -14.029194
+    },
+    {
+      "label": "math",
+      "x": 97.030712,
+      "y": 6.891593
+    },
+    {
+      "label": "safety",
+      "x": 132.973684,
+      "y": -5.772381
+    },
+    {
+      "label": "creative",
+      "x": -158.437787,
+      "y": -66.415787
+    }
+  ],
+  "full_explained_variance_ratio": [
+    0.684223,
+    0.131278
+  ],
+  "filtered_projection": [
+    {
+      "label": "base",
+      "x": -25.628342,
+      "y": 13.30362
+    },
+    {
+      "label": "code",
+      "x": 74.528412,
+      "y": -85.719944
+    },
+    {
+      "label": "medical",
+      "x": -8.66543,
+      "y": 12.6984
+    },
+    {
+      "label": "math",
+      "x": -84.648818,
+      "y": 2.744819
+    },
+    {
+      "label": "safety",
+      "x": -87.387864,
+      "y": 1.994926
+    },
+    {
+      "label": "creative",
+      "x": 131.802043,
+      "y": 54.978178
+    }
+  ],
+  "filtered_explained_variance_ratio": [
+    0.613538,
+    0.171015
+  ],
+  "distance_from_base": {
+    "full": {
+      "code": 180.674835,
+      "medical": 113.065102,
+      "math": 110.190689,
+      "safety": 153.66394,
+      "creative": 204.852005
+    },
+    "filtered": {
+      "code": 150.904922,
+      "medical": 104.229462,
+      "math": 92.669235,
+      "safety": 109.848114,
+      "creative": 175.393585
+    }
+  },
+  "interpretation": [
+    "In the full-vector PCA, PC1 explains 68.4% of the variance and is dominated by the largest shared change axis.",
+    "In the structural-filtered PCA, PC1 still explains 61.4%, and the layout continues to separate the math/safety side from the code/creative side.",
+    "The largest raw fingerprint shifts come from `creative` and `code`, and they remain the largest even after filtering (`creative`, `code`).",
+    "The base point sits at the zero vector by construction, so distance from base should be read as total feature-shift magnitude rather than behavioral distance."
+  ]
+}

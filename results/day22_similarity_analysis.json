@@ -1,0 +1,389 @@
+{
+  "structural_feature_union_count": 252,
+  "matrices": {
+    "full_mass_cosine": {
+      "index": [
+        "code",
+        "medical",
+        "math",
+        "safety",
+        "creative"
+      ],
+      "columns": [
+        "code",
+        "medical",
+        "math",
+        "safety",
+        "creative"
+      ],
+      "values": [
+        [
+          1.0,
+          0.25243,
+          -0.231198,
+          -0.274355,
+          0.649927
+        ],
+        [
+          0.25243,
+          1.0,
+          0.22679,
+          0.274293,
+          0.214629
+        ],
+        [
+          -0.231198,
+          0.22679,
+          1.0,
+          0.732998,
+          -0.425243
+        ],
+        [
+          -0.274355,
+          0.274293,
+          0.732998,
+          1.0,
+          -0.399233
+        ],
+        [
+          0.649927,
+          0.214629,
+          -0.425243,
+          -0.399233,
+          1.0
+        ]
+      ]
+    },
+    "full_mass_correlation": {
+      "index": [
+        "code",
+        "medical",
+        "math",
+        "safety",
+        "creative"
+      ],
+      "columns": [
+        "code",
+        "medical",
+        "math",
+        "safety",
+        "creative"
+      ],
+      "values": [
+        [
+          1.0,
+          0.247902,
+          -0.241793,
+          -0.2851,
+          0.645979
+        ],
+        [
+          0.247902,
+          1.0,
+          0.223245,
+          0.271046,
+          0.210006
+        ],
+        [
+          -0.241793,
+          0.223245,
+          1.0,
+          0.731408,
+          -0.436923
+        ],
+        [
+          -0.2851,
+          0.271046,
+          0.731408,
+          1.0,
+          -0.410447
+        ],
+        [
+          0.645979,
+          0.210006,
+          -0.436923,
+          -0.410447,
+          1.0
+        ]
+      ]
+    },
+    "filtered_mass_cosine": {
+      "index": [
+        "code",
+        "medical",
+        "math",
+        "safety",
+        "creative"
+      ],
+      "columns": [
+        "code",
+        "medical",
+        "math",
+        "safety",
+        "creative"
+      ],
+      "values": [
+        [
+          1.0,
+          0.346327,
+          -0.126138,
+          -0.047242,
+          0.568817
+        ],
+        [
+          0.346327,
+          1.0,
+          0.192834,
+          0.248907,
+          0.310132
+        ],
+        [
+          -0.126138,
+          0.192834,
+          1.0,
+          0.69101,
+          -0.364432
+        ],
+        [
+          -0.047242,
+          0.248907,
+          0.69101,
+          1.0,
+          -0.252942
+        ],
+        [
+          0.568817,
+          0.310132,
+          -0.364432,
+          -0.252942,
+          1.0
+        ]
+      ]
+    },
+    "filtered_mass_correlation": {
+      "index": [
+        "code",
+        "medical",
+        "math",
+        "safety",
+        "creative"
+      ],
+      "columns": [
+        "code",
+        "medical",
+        "math",
+        "safety",
+        "creative"
+      ],
+      "values": [
+        [
+          1.0,
+          0.342984,
+          -0.137227,
+          -0.059146,
+          0.563993
+        ],
+        [
+          0.342984,
+          1.0,
+          0.189062,
+          0.245018,
+          0.306687
+        ],
+        [
+          -0.137227,
+          0.189062,
+          1.0,
+          0.688228,
+          -0.376895
+        ],
+        [
+          -0.059146,
+          0.245018,
+          0.688228,
+          1.0,
+          -0.266153
+        ],
+        [
+          0.563993,
+          0.306687,
+          -0.376895,
+          -0.266153,
+          1.0
+        ]
+      ]
+    },
+    "full_freq_cosine": {
+      "index": [
+        "code",
+        "medical",
+        "math",
+        "safety",
+        "creative"
+      ],
+      "columns": [
+        "code",
+        "medical",
+        "math",
+        "safety",
+        "creative"
+      ],
+      "values": [
+        [
+          1.0,
+          0.288126,
+          0.263851,
+          0.293709,
+          0.517777
+        ],
+        [
+          0.288126,
+          1.0,
+          0.264048,
+          0.281358,
+          0.247993
+        ],
+        [
+          0.263851,
+          0.264048,
+          1.0,
+          0.422643,
+          0.116906
+        ],
+        [
+          0.293709,
+          0.281358,
+          0.422643,
+          1.0,
+          0.203128
+        ],
+        [
+          0.517777,
+          0.247993,
+          0.116906,
+          0.203128,
+          1.0
+        ]
+      ]
+    },
+    "changed_feature_jaccard": {
+      "index": [
+        "code",
+        "medical",
+        "math",
+        "safety",
+        "creative"
+      ],
+      "columns": [
+        "code",
+        "medical",
+        "math",
+        "safety",
+        "creative"
+      ],
+      "values": [
+        [
+          1.0,
+          0.269751,
+          0.258993,
+          0.237734,
+          0.320541
+        ],
+        [
+          0.269751,
+          1.0,
+          0.293965,
+          0.26929,
+          0.259922
+        ],
+        [
+          0.258993,
+          0.293965,
+          1.0,
+          0.287006,
+          0.250257
+        ],
+        [
+          0.237734,
+          0.26929,
+          0.287006,
+          1.0,
+          0.230088
+        ],
+        [
+          0.320541,
+          0.259922,
+          0.250257,
+          0.230088,
+          1.0
+        ]
+      ]
+    }
+  },
+  "key_pairs": {
+    "full_mass_cosine": {
+      "highest": {
+        "left": "math",
+        "right": "safety",
+        "value": 0.7329977862969954
+      },
+      "lowest": {
+        "left": "math",
+        "right": "creative",
+        "value": -0.4252432834937513
+      },
+      "top_pairs": [
+        {
+          "left": "math",
+          "right": "safety",
+          "value": 0.7329977862969954
+        },
+        {
+          "left": "code",
+          "right": "creative",
+          "value": 0.6499267042151208
+        },
+        {
+          "left": "medical",
+          "right": "safety",
+          "value": 0.2742930914365092
+        }
+      ]
+    },
+    "filtered_mass_cosine": {
+      "highest": {
+        "left": "math",
+        "right": "safety",
+        "value": 0.6910104388802286
+      },
+      "lowest": {
+        "left": "math",
+        "right": "creative",
+        "value": -0.3644320707172342
+      },
+      "top_pairs": [
+        {
+          "left": "math",
+          "right": "safety",
+          "value": 0.6910104388802286
+        },
+        {
+          "left": "code",
+          "right": "creative",
+          "value": 0.5688172542877925
+        },
+        {
+          "left": "code",
+          "right": "medical",
+          "value": 0.34632735615902566
+        }
+      ]
+    }
+  },
+  "interpretation": [
+    "`math` and `safety` remain the strongest pair in both the full and filtered views (0.733 -> 0.691 cosine), so that relationship is not just a structural-BOS artifact.",
+    "`code` and `creative` are the second-closest pair in both views (0.650 -> 0.569 cosine), which suggests a second shared change axis.",
+    "`medical` is the only adapter that stays positively aligned with every other adapter after filtering, which makes it the bridge case rather than a clean cluster endpoint.",
+    "The structural filter currently removes 252 features. That is conservative rather than exhaustive, so the filtered matrix should be read as a lower-bound attempt to isolate semantics."
+  ]
+}

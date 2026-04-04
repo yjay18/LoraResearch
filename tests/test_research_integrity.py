@@ -14,6 +14,7 @@ import numpy as np
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 RESULTS_DIR = ROOT / "results"
+ADAPTERS_DIR = RESULTS_DIR / "adapters"
 PROMPTS_PATH = DATA_DIR / "prompts_300.json"
 ACTIVATIONS_DIR = DATA_DIR / "activations"
 FEATURES_DIR = DATA_DIR / "sae_features"
@@ -22,6 +23,14 @@ DIFF_DIR = RESULTS_DIR / "differential"
 CLASSIFICATION_DIR = RESULTS_DIR / "classification"
 LABELS_DIR = RESULTS_DIR / "labels"
 DAY16_REPORT = RESULTS_DIR / "day16_code_adapter_deep_dive.json"
+DAY17_REPORT = RESULTS_DIR / "day17_medical_adapter_deep_dive.json"
+DAY18_UNIVERSAL = RESULTS_DIR / "day18_universal_features.json"
+DAY19_MANIFEST = RESULTS_DIR / "day19_visualizations.json"
+DAY20_SUMMARY = RESULTS_DIR / "day20_robustness_summary.json"
+DAY21_FINGERPRINTS = RESULTS_DIR / "day21_fingerprint_vectors.json"
+DAY22_SIMILARITY = RESULTS_DIR / "day22_similarity_analysis.json"
+DAY23_EMBEDDING = RESULTS_DIR / "day23_fingerprint_embedding.json"
+FINGERPRINT_DIR = RESULTS_DIR / "fingerprints"
 
 BASE_AND_ADAPTERS = ["base", "code", "medical", "math", "safety", "creative"]
 ADAPTERS = BASE_AND_ADAPTERS[1:]
@@ -106,6 +115,17 @@ class ResearchIntegrityTest(unittest.TestCase):
                 self.assertEqual(arr.shape[0], prompt_meta["seq_len"])
                 self.assertEqual(arr.shape[1], metadata["d_model"])
                 self.assertEqual(arr.dtype, np.float32)
+
+    def test_adapter_directories_are_pruned_to_reloadable_files(self) -> None:
+        expected_files = {"README.md", "adapter_config.json", "adapter_model.safetensors"}
+
+        for domain in ADAPTERS:
+            adapter_dir = ADAPTERS_DIR / domain
+            self.assertTrue(adapter_dir.exists())
+            self.assertEqual(
+                {path.name for path in adapter_dir.iterdir()},
+                expected_files,
+            )
 
     def test_sae_feature_artifacts_match_saved_metadata(self) -> None:
         for domain in BASE_AND_ADAPTERS:
@@ -247,6 +267,108 @@ class ResearchIntegrityTest(unittest.TestCase):
 
         self.assertEqual(report["classification_counts"], {label: class_counts[label] for label in report["classification_counts"]})
         self.assertEqual(report["label_family_counts"], {label: family_count_map[label] for label in report["label_family_counts"]})
+
+    def test_day17_medical_report_matches_labeled_features(self) -> None:
+        report = load_json(DAY17_REPORT)
+        labels = load_json(LABELS_DIR / "medical_feature_labels.json")["labels"]
+
+        class_counts = Counter(row["classification"] for row in labels)
+        family_count_map = Counter(row["label_family"] for row in labels)
+
+        self.assertEqual(report["adapter"], "medical")
+        self.assertEqual(report["top_k"], 100)
+        self.assertEqual(report["classification_counts"], {label: class_counts[label] for label in report["classification_counts"]})
+        self.assertEqual(report["label_family_counts"], {label: family_count_map[label] for label in report["label_family_counts"]})
+
+    def test_day18_universal_features_match_classification_intersection(self) -> None:
+        summary = load_json(DAY18_UNIVERSAL)
+        universal_ids = None
+
+        for domain in ADAPTERS:
+            csv_path = CLASSIFICATION_DIR / f"{domain}_classified_features.csv"
+            changed = set()
+            with open(csv_path, newline="", encoding="utf-8") as f:
+                reader = csv.DictReader(f)
+                for row in reader:
+                    if row["classification"] != "unchanged":
+                        changed.add(int(row["feature_id"]))
+            universal_ids = changed if universal_ids is None else universal_ids & changed
+
+        self.assertEqual(summary["universal_feature_count"], len(universal_ids))
+        self.assertLessEqual(len(summary["top_universal_features"]), summary["top_k"])
+        for row in summary["top_universal_features"]:
+            self.assertIn(int(row["feature_id"]), universal_ids)
+
+    def test_day19_visualization_manifest_paths_exist(self) -> None:
+        manifest = load_json(DAY19_MANIFEST)
+
+        self.assertTrue(Path(manifest["notebook"]).exists())
+        self.assertTrue(Path(manifest["universal_figure"]).exists())
+        for domain in ADAPTERS:
+            figures = manifest["adapter_figures"][domain]
+            self.assertEqual(len(figures), 3)
+            for figure in figures:
+                self.assertTrue(Path(figure).exists())
+
+    def test_day20_robustness_summary_is_well_formed(self) -> None:
+        summary = load_json(DAY20_SUMMARY)
+
+        self.assertEqual(len(summary["adapters"]), len(ADAPTERS))
+        seen = set()
+        for adapter_summary in summary["adapters"]:
+            adapter = adapter_summary["adapter"]
+            self.assertIn(adapter, ADAPTERS)
+            self.assertNotIn(adapter, seen)
+            seen.add(adapter)
+            self.assertGreaterEqual(adapter_summary["selected_feature_count"], 100)
+            self.assertEqual(len(adapter_summary["prefix_stats"]), 6)
+            self.assertEqual(set(adapter_summary["method_stats"].keys()), {"composite", "abs_mass", "abs_freq"})
+            for row in adapter_summary["prefix_stats"]:
+                self.assertGreaterEqual(row["structural_fraction"], 0.0)
+                self.assertLessEqual(row["structural_fraction"], 1.0)
+                self.assertGreaterEqual(row["semantic_match"], 0.0)
+                self.assertLessEqual(row["semantic_match"], 1.0)
+
+    def test_day21_fingerprint_artifacts_exist_and_align(self) -> None:
+        payload = load_json(DAY21_FINGERPRINTS)
+
+        self.assertEqual(len(payload["adapter_summaries"]), len(ADAPTERS))
+        seen = set()
+        for summary in payload["adapter_summaries"]:
+            adapter = summary["adapter"]
+            self.assertIn(adapter, ADAPTERS)
+            self.assertNotIn(adapter, seen)
+            seen.add(adapter)
+            self.assertEqual(summary["feature_count"], 16384)
+            self.assertTrue(Path(summary["vector_path"]).exists())
+            self.assertTrue(Path(summary["labels_path"]).exists())
+
+            label_payload = load_json(Path(summary["labels_path"]))
+            self.assertEqual(label_payload["adapter"], adapter)
+            self.assertEqual(label_payload["top_k"], 250)
+            self.assertEqual(label_payload["label_count"], 250)
+
+    def test_day22_similarity_matrices_are_square(self) -> None:
+        payload = load_json(DAY22_SIMILARITY)
+
+        self.assertGreaterEqual(payload["structural_feature_union_count"], 1)
+        for matrix in payload["matrices"].values():
+            self.assertEqual(matrix["index"], matrix["columns"])
+            self.assertEqual(len(matrix["index"]), len(ADAPTERS))
+            self.assertEqual(len(matrix["values"]), len(ADAPTERS))
+            for row in matrix["values"]:
+                self.assertEqual(len(row), len(ADAPTERS))
+
+    def test_day23_embedding_contains_base_and_adapters(self) -> None:
+        payload = load_json(DAY23_EMBEDDING)
+
+        for key in ["full_projection", "filtered_projection"]:
+            labels = [row["label"] for row in payload[key]]
+            self.assertEqual(set(labels), {"base", *ADAPTERS})
+
+        for key in ["full_explained_variance_ratio", "filtered_explained_variance_ratio"]:
+            self.assertEqual(len(payload[key]), 2)
+            self.assertGreater(payload[key][0], 0.0)
 
 
 if __name__ == "__main__":

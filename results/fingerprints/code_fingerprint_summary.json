@@ -1,0 +1,138 @@
+{
+  "adapter": "code",
+  "feature_count": 16384,
+  "changed_feature_count": 2406,
+  "top_k_labeled": 250,
+  "structural_topk_count": 136,
+  "non_structural_amplified_count": 50,
+  "non_structural_amplified_semantic_match": 0.3,
+  "signed_mass_l1": 4673.86084,
+  "signed_mass_l2": 180.674835,
+  "signed_freq_l1": 13.627590179,
+  "top_positive_features": [
+    {
+      "feature_id": 6810,
+      "delta_mean_prompt_activation": 38.556213,
+      "classification": "amplified",
+      "change_rank_score": 24.615198
+    },
+    {
+      "feature_id": 2009,
+      "delta_mean_prompt_activation": 33.409225,
+      "classification": "amplified",
+      "change_rank_score": 41.351493
+    },
+    {
+      "feature_id": 9059,
+      "delta_mean_prompt_activation": 15.879492,
+      "classification": "amplified",
+      "change_rank_score": 22.455847
+    },
+    {
+      "feature_id": 8806,
+      "delta_mean_prompt_activation": 15.622467,
+      "classification": "amplified",
+      "change_rank_score": 17.393619
+    },
+    {
+      "feature_id": 14599,
+      "delta_mean_prompt_activation": 15.246628,
+      "classification": "amplified",
+      "change_rank_score": 16.484135
+    },
+    {
+      "feature_id": 14093,
+      "delta_mean_prompt_activation": 12.028301,
+      "classification": "amplified",
+      "change_rank_score": 11.24409
+    },
+    {
+      "feature_id": 10775,
+      "delta_mean_prompt_activation": 11.238392,
+      "classification": "amplified",
+      "change_rank_score": 25.22215
+    },
+    {
+      "feature_id": 13700,
+      "delta_mean_prompt_activation": 10.592651,
+      "classification": "amplified",
+      "change_rank_score": 19.47308
+    },
+    {
+      "feature_id": 2291,
+      "delta_mean_prompt_activation": 10.25885,
+      "classification": "amplified",
+      "change_rank_score": 8.280315
+    },
+    {
+      "feature_id": 8675,
+      "delta_mean_prompt_activation": 7.970873,
+      "classification": "amplified",
+      "change_rank_score": 18.865732
+    }
+  ],
+  "top_negative_features": [
+    {
+      "feature_id": 1041,
+      "delta_mean_prompt_activation": -80.22778,
+      "classification": "suppressed",
+      "change_rank_score": 40.209485
+    },
+    {
+      "feature_id": 7541,
+      "delta_mean_prompt_activation": -74.42496,
+      "classification": "suppressed",
+      "change_rank_score": 62.502236
+    },
+    {
+      "feature_id": 11087,
+      "delta_mean_prompt_activation": -32.78769,
+      "classification": "suppressed",
+      "change_rank_score": 13.040848
+    },
+    {
+      "feature_id": 11306,
+      "delta_mean_prompt_activation": -28.157288,
+      "classification": "suppressed",
+      "change_rank_score": 27.19917
+    },
+    {
+      "feature_id": 1178,
+      "delta_mean_prompt_activation": -25.868233,
+      "classification": "suppressed",
+      "change_rank_score": 10.28873
+    },
+    {
+      "feature_id": 2620,
+      "delta_mean_prompt_activation": -22.835083,
+      "classification": "suppressed",
+      "change_rank_score": 9.142337
+    },
+    {
+      "feature_id": 4667,
+      "delta_mean_prompt_activation": -21.194183,
+      "classification": "suppressed",
+      "change_rank_score": 8.429692
+    },
+    {
+      "feature_id": 11767,
+      "delta_mean_prompt_activation": -16.371216,
+      "classification": "suppressed",
+      "change_rank_score": 8.211424
+    },
+    {
+      "feature_id": 13860,
+      "delta_mean_prompt_activation": -14.397621,
+      "classification": "suppressed",
+      "change_rank_score": 10.986454
+    },
+    {
+      "feature_id": 6889,
+      "delta_mean_prompt_activation": -11.755951,
+      "classification": "suppressed",
+      "change_rank_score": 5.135766
+    }
+  ],
+  "vector_path": "results\\fingerprints\\code_fingerprint_vectors.npz",
+  "labels_path": "results\\fingerprints\\code_top250_labels.json"
+}
